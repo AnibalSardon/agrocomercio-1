@@ -1,3 +1,5 @@
+
+
 /* Data for the 'dbo.TipoPersonal' table  (Records 1 - 2) */
 
 INSERT INTO [dbo].[TipoPersonal] ([tpeCod], [tpeDescripcion])
@@ -7973,3 +7975,5 @@ GO
 INSERT INTO [dbo].[Usuarios] ([usrCod], [perCod], [usrLogin], [usrClave], [RolCod])
 VALUES (2, 3, N'silviA', N'silvia', 4)
 GO
+
+

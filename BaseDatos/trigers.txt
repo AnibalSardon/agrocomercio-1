@@ -1,3 +1,6 @@
+
+
+
 CREATE TRIGGER [dbo].[ins_letra_Pago] ON [dbo].[letra]
 WITH EXECUTE AS CALLER
 FOR INSERT
@@ -265,3 +268,5 @@ FROM inserted
 		end
 END
 GO
+
+
