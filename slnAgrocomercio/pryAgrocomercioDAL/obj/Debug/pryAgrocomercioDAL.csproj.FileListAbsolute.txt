@@ -1,0 +1,42 @@
+D:\AGROCOMERCIO\AGROCOMERCIO.NET\VS2012_V2\slnAgrocomercio\pryAgrocomercioDAL\bin\Debug\pryAgrocomercioDAL.dll.config
+D:\AGROCOMERCIO\AGROCOMERCIO.NET\VS2012_V2\slnAgrocomercio\pryAgrocomercioDAL\bin\Debug\pryAgrocomercioDAL.dll
+D:\AGROCOMERCIO\AGROCOMERCIO.NET\VS2012_V2\slnAgrocomercio\pryAgrocomercioDAL\bin\Debug\pryAgrocomercioDAL.pdb
+D:\AGROCOMERCIO\AGROCOMERCIO.NET\VS2012_V2\slnAgrocomercio\pryAgrocomercioDAL\obj\Debug\pryAgrocomercioDAL.dll
+D:\AGROCOMERCIO\AGROCOMERCIO.NET\VS2012_V2\slnAgrocomercio\pryAgrocomercioDAL\obj\Debug\pryAgrocomercioDAL.pdb
+D:\AGROCOMERCIO\AGROCOMERCIO.NET\VS2012_V2\slnAgrocomercio\pryAgrocomercioDAL\obj\Debug\pryAgrocomercioDAL.csprojResolveAssemblyReference.cache
+C:\steven\AGROCOMERCIO\AGROCOMERCIO.NET\slnAgrocomercio\pryAgrocomercioDAL\bin\Debug\pryAgrocomercioDAL.dll.config
+C:\steven\AGROCOMERCIO\AGROCOMERCIO.NET\slnAgrocomercio\pryAgrocomercioDAL\bin\Debug\pryAgrocomercioDAL.dll
+C:\steven\AGROCOMERCIO\AGROCOMERCIO.NET\slnAgrocomercio\pryAgrocomercioDAL\bin\Debug\pryAgrocomercioDAL.pdb
+C:\steven\AGROCOMERCIO\AGROCOMERCIO.NET\slnAgrocomercio\pryAgrocomercioDAL\obj\Debug\ResolveAssemblyReference.cache
+C:\steven\AGROCOMERCIO\AGROCOMERCIO.NET\slnAgrocomercio\pryAgrocomercioDAL\obj\Debug\pryAgrocomercioDAL.dll
+C:\steven\AGROCOMERCIO\AGROCOMERCIO.NET\slnAgrocomercio\pryAgrocomercioDAL\obj\Debug\pryAgrocomercioDAL.pdb
+D:\agrocomercio\proyecto\slnAgrocomercio\pryAgrocomercioDAL\bin\Debug\pryAgrocomercioDAL.dll.config
+D:\agrocomercio\proyecto\slnAgrocomercio\pryAgrocomercioDAL\bin\Debug\pryAgrocomercioDAL.dll
+D:\agrocomercio\proyecto\slnAgrocomercio\pryAgrocomercioDAL\bin\Debug\pryAgrocomercioDAL.pdb
+D:\agrocomercio\proyecto\slnAgrocomercio\pryAgrocomercioDAL\obj\Debug\ResolveAssemblyReference.cache
+D:\agrocomercio\proyecto\slnAgrocomercio\pryAgrocomercioDAL\obj\Debug\pryAgrocomercioDAL.dll
+D:\agrocomercio\proyecto\slnAgrocomercio\pryAgrocomercioDAL\obj\Debug\pryAgrocomercioDAL.pdb
+D:\AGROCOMERCIO\PROYECTO\PROTOTIPOS\INTEGRADO\agrocomercio 2013.01.04\slnAgrocomercio-2013-01-04\slnAgrocomercio\pryAgrocomercioDAL\obj\Debug\ResolveAssemblyReference.cache
+D:\AGROCOMERCIO\PROYECTO\PROTOTIPOS\INTEGRADO\agrocomercio 2013.01.04\slnAgrocomercio-2013-01-04\slnAgrocomercio\pryAgrocomercioDAL\obj\Debug\pryAgrocomercioDAL.dll
+D:\AGROCOMERCIO\PROYECTO\PROTOTIPOS\INTEGRADO\agrocomercio 2013.01.04\slnAgrocomercio-2013-01-04\slnAgrocomercio\pryAgrocomercioDAL\obj\Debug\pryAgrocomercioDAL.pdb
+D:\AGROCOMERCIO\PROYECTO\PROTOTIPOS\INTEGRADO\agrocomercio 2013.01.04\slnAgrocomercio-2013-01-04\slnAgrocomercio\pryAgrocomercioDAL\bin\Debug\pryAgrocomercioDAL.dll.config
+D:\AGROCOMERCIO\PROYECTO\PROTOTIPOS\INTEGRADO\agrocomercio 2013.01.04\slnAgrocomercio-2013-01-04\slnAgrocomercio\pryAgrocomercioDAL\bin\Debug\pryAgrocomercioDAL.dll
+D:\AGROCOMERCIO\PROYECTO\PROTOTIPOS\INTEGRADO\agrocomercio 2013.01.04\slnAgrocomercio-2013-01-04\slnAgrocomercio\pryAgrocomercioDAL\bin\Debug\pryAgrocomercioDAL.pdb
+D:\AGROCOMERCIO\AGROCOMERCIO.NET\VS2012\slnAgrocomercio-2013-01-12_anibal\slnAgrocomercio-2013-01-12\slnAgrocomercio\pryAgrocomercioDAL\bin\Debug\pryAgrocomercioDAL.dll.config
+D:\AGROCOMERCIO\AGROCOMERCIO.NET\VS2012\slnAgrocomercio-2013-01-12_anibal\slnAgrocomercio-2013-01-12\slnAgrocomercio\pryAgrocomercioDAL\bin\Debug\pryAgrocomercioDAL.dll
+D:\AGROCOMERCIO\AGROCOMERCIO.NET\VS2012\slnAgrocomercio-2013-01-12_anibal\slnAgrocomercio-2013-01-12\slnAgrocomercio\pryAgrocomercioDAL\bin\Debug\pryAgrocomercioDAL.pdb
+D:\AGROCOMERCIO\AGROCOMERCIO.NET\VS2012\slnAgrocomercio-2013-01-12_anibal\slnAgrocomercio-2013-01-12\slnAgrocomercio\pryAgrocomercioDAL\obj\Debug\pryAgrocomercioDAL.csprojResolveAssemblyReference.cache
+D:\AGROCOMERCIO\AGROCOMERCIO.NET\VS2012\slnAgrocomercio-2013-01-12_anibal\slnAgrocomercio-2013-01-12\slnAgrocomercio\pryAgrocomercioDAL\obj\Debug\pryAgrocomercioDAL.dll
+D:\AGROCOMERCIO\AGROCOMERCIO.NET\VS2012\slnAgrocomercio-2013-01-12_anibal\slnAgrocomercio-2013-01-12\slnAgrocomercio\pryAgrocomercioDAL\obj\Debug\pryAgrocomercioDAL.pdb
+D:\AGROCOMERCIO\AGROCOMERCIO.NET\VS2012\slnAgrocomercio\pryAgrocomercioDAL\bin\Debug\pryAgrocomercioDAL.dll.config
+D:\AGROCOMERCIO\AGROCOMERCIO.NET\VS2012\slnAgrocomercio\pryAgrocomercioDAL\bin\Debug\pryAgrocomercioDAL.dll
+D:\AGROCOMERCIO\AGROCOMERCIO.NET\VS2012\slnAgrocomercio\pryAgrocomercioDAL\bin\Debug\pryAgrocomercioDAL.pdb
+D:\AGROCOMERCIO\AGROCOMERCIO.NET\VS2012\slnAgrocomercio\pryAgrocomercioDAL\obj\Debug\pryAgrocomercioDAL.csprojResolveAssemblyReference.cache
+D:\AGROCOMERCIO\AGROCOMERCIO.NET\VS2012\slnAgrocomercio\pryAgrocomercioDAL\obj\Debug\pryAgrocomercioDAL.dll
+D:\AGROCOMERCIO\AGROCOMERCIO.NET\VS2012\slnAgrocomercio\pryAgrocomercioDAL\obj\Debug\pryAgrocomercioDAL.pdb
+D:\AGROCOMERCIO\PROYECTO\PROTOTIPOS\INTEGRADO\agrocomercio 2013.01.23\slnAgrocomercio-2013-01-23\slnAgrocomercio\pryAgrocomercioDAL\bin\Debug\pryAgrocomercioDAL.dll.config
+D:\AGROCOMERCIO\PROYECTO\PROTOTIPOS\INTEGRADO\agrocomercio 2013.01.23\slnAgrocomercio-2013-01-23\slnAgrocomercio\pryAgrocomercioDAL\bin\Debug\pryAgrocomercioDAL.dll
+D:\AGROCOMERCIO\PROYECTO\PROTOTIPOS\INTEGRADO\agrocomercio 2013.01.23\slnAgrocomercio-2013-01-23\slnAgrocomercio\pryAgrocomercioDAL\bin\Debug\pryAgrocomercioDAL.pdb
+D:\AGROCOMERCIO\PROYECTO\PROTOTIPOS\INTEGRADO\agrocomercio 2013.01.23\slnAgrocomercio-2013-01-23\slnAgrocomercio\pryAgrocomercioDAL\obj\Debug\ResolveAssemblyReference.cache
+D:\AGROCOMERCIO\PROYECTO\PROTOTIPOS\INTEGRADO\agrocomercio 2013.01.23\slnAgrocomercio-2013-01-23\slnAgrocomercio\pryAgrocomercioDAL\obj\Debug\pryAgrocomercioDAL.dll
+D:\AGROCOMERCIO\PROYECTO\PROTOTIPOS\INTEGRADO\agrocomercio 2013.01.23\slnAgrocomercio-2013-01-23\slnAgrocomercio\pryAgrocomercioDAL\obj\Debug\pryAgrocomercioDAL.pdb

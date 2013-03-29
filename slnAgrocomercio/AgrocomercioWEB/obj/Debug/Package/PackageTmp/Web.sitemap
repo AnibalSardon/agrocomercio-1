@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="#" title="Almacenes"  description="Almacenes">
+      <siteMapNode url="~/compras/wfrmCompras.aspx" title="Compras" description="Compras" />
+      <siteMapNode url="~/maestros/webforms/wfrmArticulos.aspx" title="Articulos" description="Mantenimiento de Productos" />
+      <siteMapNode url="~/maestros/webforms/wfrmProveedores.aspx" title="Proveedores" description="Mantenimiento de Laboratorios" />
+    </siteMapNode>
+  <siteMapNode url="#" title="Ventas"  description="Ventas">
+    <siteMapNode url="~/ventas/wfrmVentas.aspx" title="Registro Ventas" description="Registrar las Ventas" />
+    <siteMapNode url="~/pagos/wfrmLetrasVentas.aspx" title="Generar Pagos" description="Registrar los Pagos" />
+    <siteMapNode url="~/pagos/wfrmcntrPagVentas.aspx" title="Pagos " description="Pagos" />
+  </siteMapNode>
+  <siteMapNode url="#" title="Mantenimientos"  description="Mantenimiento de Tablas">
+    <siteMapNode url="~/maestros/webforms/wfrmClientes.aspx" title="Clientes" description="Mantenimiento de Clientes" />
+  </siteMapNode>
+  <siteMapNode url="#" title="Compras"  description="Letras">
+    <siteMapNode url="~/pagos/wfrmLetrasCompras.aspx" title="Registro Letras" description="Registrar las Letras" />
+    <siteMapNode url="~/pagos/wfrmNota.aspx" title="Registro Notas" description="Registrar las Notas" />
+    <siteMapNode url="~/pagos/wfrmPagoLetras.aspx" title="Pago de Letras" description="Pago de Letras" />
+  </siteMapNode>
+</siteMap>

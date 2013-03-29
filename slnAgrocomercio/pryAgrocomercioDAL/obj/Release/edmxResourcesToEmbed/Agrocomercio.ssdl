@@ -1,0 +1,1370 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AgrocomercioModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="AgrocomercioModelStoreContainer">
+    <EntitySet Name="Articulos" EntityType="AgrocomercioModel.Store.Articulos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Atributos" EntityType="AgrocomercioModel.Store.Atributos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Clientes" EntityType="AgrocomercioModel.Store.Clientes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="det_letra" EntityType="AgrocomercioModel.Store.det_letra" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DetOperacion" EntityType="AgrocomercioModel.Store.DetOperacion" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DocumenOperacion" EntityType="AgrocomercioModel.Store.DocumenOperacion" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="letra" EntityType="AgrocomercioModel.Store.letra" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ListaPrecios" EntityType="AgrocomercioModel.Store.ListaPrecios" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LotesArt" EntityType="AgrocomercioModel.Store.LotesArt" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Notas" EntityType="AgrocomercioModel.Store.Notas" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Operaciones" EntityType="AgrocomercioModel.Store.Operaciones" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Pag_letras" EntityType="AgrocomercioModel.Store.Pag_letras" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Personal" EntityType="AgrocomercioModel.Store.Personal" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Proveedores" EntityType="AgrocomercioModel.Store.Proveedores" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="rel_notfactura" EntityType="AgrocomercioModel.Store.rel_notfactura" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Roles" EntityType="AgrocomercioModel.Store.Roles" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbliqCobranza" EntityType="AgrocomercioModel.Store.tbliqCobranza" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TipoCambios" EntityType="AgrocomercioModel.Store.TipoCambios" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TipoPersonal" EntityType="AgrocomercioModel.Store.TipoPersonal" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Transportistas" EntityType="AgrocomercioModel.Store.Transportistas" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Ubigeos" EntityType="AgrocomercioModel.Store.Ubigeos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Unidades" EntityType="AgrocomercioModel.Store.Unidades" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Usuarios" EntityType="AgrocomercioModel.Store.Usuarios" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="cab_letra" EntityType="AgrocomercioModel.Store.cab_letra" store:Type="Views" store:Schema="dbo" store:Name="cab_letra">
+      <DefiningQuery>SELECT 
+      [cab_letra].[valor] AS [valor], 
+      [cab_letra].[icodigo] AS [icodigo], 
+      [cab_letra].[numDoc] AS [numDoc], 
+      [cab_letra].[PrvRazon] AS [PrvRazon], 
+      [cab_letra].[FecEmesion] AS [FecEmesion], 
+      [cab_letra].[itotcuota] AS [itotcuota], 
+      [cab_letra].[nmontocuota] AS [nmontocuota], 
+      [cab_letra].[opetotPagpen] AS [opetotPagpen], 
+      [cab_letra].[cmoneda] AS [cmoneda], 
+      [cab_letra].[nintpag] AS [nintpag], 
+      [cab_letra].[estado] AS [estado], 
+      [cab_letra].[dfecultpago] AS [dfecultpago], 
+      [cab_letra].[fec_nxtpg] AS [fec_nxtpg], 
+      [cab_letra].[ctippago] AS [ctippago]
+      FROM [dbo].[cab_letra] AS [cab_letra]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="detalle_pagos" EntityType="AgrocomercioModel.Store.detalle_pagos" store:Type="Views" store:Schema="dbo" store:Name="detalle_pagos">
+      <DefiningQuery>SELECT 
+      [detalle_pagos].[vendedor] AS [vendedor], 
+      [detalle_pagos].[ccodletra] AS [ccodletra], 
+      [detalle_pagos].[cnumletra] AS [cnumletra], 
+      [detalle_pagos].[cnumcuota] AS [cnumcuota], 
+      [detalle_pagos].[CliNombre] AS [CliNombre], 
+      [detalle_pagos].[OpeFecEmision] AS [OpeFecEmision], 
+      [detalle_pagos].[dfecvenc] AS [dfecvenc], 
+      [detalle_pagos].[dfecpago] AS [dfecpago], 
+      [detalle_pagos].[diaatr] AS [diaatr], 
+      [detalle_pagos].[cmoneda] AS [cmoneda], 
+      [detalle_pagos].[total] AS [total], 
+      [detalle_pagos].[saldo] AS [saldo], 
+      [detalle_pagos].[PAG_TOTAL] AS [PAG_TOTAL], 
+      [detalle_pagos].[mnt_cuota] AS [mnt_cuota], 
+      [detalle_pagos].[saldo_cuota] AS [saldo_cuota], 
+      [detalle_pagos].[pag_cuota] AS [pag_cuota], 
+      [detalle_pagos].[ninteres] AS [ninteres], 
+      [detalle_pagos].[traCod] AS [traCod], 
+      [detalle_pagos].[OpeTipo] AS [OpeTipo], 
+      [detalle_pagos].[cestado] AS [cestado], 
+      [detalle_pagos].[idetletra] AS [idetletra], 
+      [detalle_pagos].[icodletra] AS [icodletra], 
+      [detalle_pagos].[inumletra] AS [inumletra], 
+      [detalle_pagos].[cli_cod] AS [cli_cod], 
+      [detalle_pagos].[ult] AS [ult]
+      FROM [dbo].[detalle_pagos] AS [detalle_pagos]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="detalle_pagos_now" EntityType="AgrocomercioModel.Store.detalle_pagos_now" store:Type="Views" store:Schema="dbo" store:Name="detalle_pagos_now">
+      <DefiningQuery>SELECT 
+      [detalle_pagos_now].[vendedor] AS [vendedor], 
+      [detalle_pagos_now].[ccodletra] AS [ccodletra], 
+      [detalle_pagos_now].[cnumletra] AS [cnumletra], 
+      [detalle_pagos_now].[cnumcuota] AS [cnumcuota], 
+      [detalle_pagos_now].[CliNombre] AS [CliNombre], 
+      [detalle_pagos_now].[OpeFecEmision] AS [OpeFecEmision], 
+      [detalle_pagos_now].[dfecvenc] AS [dfecvenc], 
+      [detalle_pagos_now].[dfecpago] AS [dfecpago], 
+      [detalle_pagos_now].[diaatr] AS [diaatr], 
+      [detalle_pagos_now].[cmoneda] AS [cmoneda], 
+      [detalle_pagos_now].[total] AS [total], 
+      [detalle_pagos_now].[saldo] AS [saldo], 
+      [detalle_pagos_now].[PAG_TOTAL] AS [PAG_TOTAL], 
+      [detalle_pagos_now].[mnt_cuota] AS [mnt_cuota], 
+      [detalle_pagos_now].[saldo_cuota] AS [saldo_cuota], 
+      [detalle_pagos_now].[pag_cuota] AS [pag_cuota], 
+      [detalle_pagos_now].[ninteres] AS [ninteres], 
+      [detalle_pagos_now].[traCod] AS [traCod], 
+      [detalle_pagos_now].[OpeTipo] AS [OpeTipo], 
+      [detalle_pagos_now].[cestado] AS [cestado], 
+      [detalle_pagos_now].[idetletra] AS [idetletra], 
+      [detalle_pagos_now].[icodletra] AS [icodletra], 
+      [detalle_pagos_now].[inumletra] AS [inumletra], 
+      [detalle_pagos_now].[cli_cod] AS [cli_cod], 
+      [detalle_pagos_now].[ult] AS [ult]
+      FROM [dbo].[detalle_pagos_now] AS [detalle_pagos_now]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="fac_pnd_let" EntityType="AgrocomercioModel.Store.fac_pnd_let" store:Type="Views" store:Schema="dbo" store:Name="fac_pnd_let">
+      <DefiningQuery>SELECT 
+      [fac_pnd_let].[valor] AS [valor], 
+      [fac_pnd_let].[dfecemision] AS [dfecemision], 
+      [fac_pnd_let].[dopCod] AS [dopCod], 
+      [fac_pnd_let].[numfac] AS [numfac], 
+      [fac_pnd_let].[PrvRazon] AS [PrvRazon], 
+      [fac_pnd_let].[opetotpagar] AS [opetotpagar], 
+      [fac_pnd_let].[OpeTotal] AS [OpeTotal], 
+      [fac_pnd_let].[PrvCod] AS [PrvCod], 
+      [fac_pnd_let].[monedas] AS [monedas], 
+      [fac_pnd_let].[percod] AS [percod], 
+      [fac_pnd_let].[tranom] AS [tranom]
+      FROM [dbo].[fac_pnd_let] AS [fac_pnd_let]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="fac_x_letra" EntityType="AgrocomercioModel.Store.fac_x_letra" store:Type="Views" store:Schema="dbo" store:Name="fac_x_letra">
+      <DefiningQuery>SELECT 
+      [fac_x_letra].[icodletra] AS [icodletra], 
+      [fac_x_letra].[valor] AS [valor], 
+      [fac_x_letra].[dfecemision] AS [dfecemision], 
+      [fac_x_letra].[dopCod] AS [dopCod], 
+      [fac_x_letra].[numfac] AS [numfac], 
+      [fac_x_letra].[PrvRazon] AS [PrvRazon], 
+      [fac_x_letra].[opetotpagar] AS [opetotpagar], 
+      [fac_x_letra].[OpeTotal] AS [OpeTotal], 
+      [fac_x_letra].[PrvCod] AS [PrvCod], 
+      [fac_x_letra].[monedas] AS [monedas]
+      FROM [dbo].[fac_x_letra] AS [fac_x_letra]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="list_detLetra" EntityType="AgrocomercioModel.Store.list_detLetra" store:Type="Views" store:Schema="dbo" store:Name="list_detLetra">
+      <DefiningQuery>SELECT 
+      [list_detLetra].[valor] AS [valor], 
+      [list_detLetra].[dfecven] AS [dfecven], 
+      [list_detLetra].[cuota] AS [cuota], 
+      [list_detLetra].[ccodletra] AS [ccodletra], 
+      [list_detLetra].[cnumletra] AS [cnumletra], 
+      [list_detLetra].[PrvRazon] AS [PrvRazon], 
+      [list_detLetra].[estado] AS [estado], 
+      [list_detLetra].[dfecpag] AS [dfecpag], 
+      [list_detLetra].[cmoneda] AS [cmoneda], 
+      [list_detLetra].[mnt_cuota] AS [mnt_cuota], 
+      [list_detLetra].[mnt_letra] AS [mnt_letra], 
+      [list_detLetra].[Saldo_total] AS [Saldo_total], 
+      [list_detLetra].[ninteres] AS [ninteres], 
+      [list_detLetra].[PrvCod] AS [PrvCod], 
+      [list_detLetra].[cestado] AS [cestado], 
+      [list_detLetra].[icodletra] AS [icodletra], 
+      [list_detLetra].[idetletra] AS [idetletra]
+      FROM [dbo].[list_detLetra] AS [list_detLetra]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="list_letra" EntityType="AgrocomercioModel.Store.list_letra" store:Type="Views" store:Schema="dbo" store:Name="list_letra">
+      <DefiningQuery>SELECT 
+      [list_letra].[valor] AS [valor], 
+      [list_letra].[numDoc] AS [numDoc], 
+      [list_letra].[fac_acum] AS [fac_acum], 
+      [list_letra].[codPer] AS [codPer], 
+      [list_letra].[PrvRazon] AS [PrvRazon], 
+      [list_letra].[FecEmesion] AS [FecEmesion], 
+      [list_letra].[itotcuota] AS [itotcuota], 
+      [list_letra].[nmontocuota] AS [nmontocuota], 
+      [list_letra].[pagpendiente] AS [pagpendiente], 
+      [list_letra].[cmoneda] AS [cmoneda], 
+      [list_letra].[nintpag] AS [nintpag], 
+      [list_letra].[estado] AS [estado], 
+      [list_letra].[dfecultpago] AS [dfecultpago], 
+      [list_letra].[fec_nxtpg] AS [fec_nxtpg], 
+      [list_letra].[icodletra] AS [icodletra], 
+      [list_letra].[ctippago] AS [ctippago], 
+      [list_letra].[PerCod] AS [PerCod], 
+      [list_letra].[TraNombre] AS [TraNombre]
+      FROM [dbo].[list_letra] AS [list_letra]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="nota_list" EntityType="AgrocomercioModel.Store.nota_list" store:Type="Views" store:Schema="dbo" store:Name="nota_list">
+      <DefiningQuery>SELECT 
+      [nota_list].[valor] AS [valor], 
+      [nota_list].[inota] AS [inota], 
+      [nota_list].[ccodnota] AS [ccodnota], 
+      [nota_list].[FecEmesion] AS [FecEmesion], 
+      [nota_list].[iprvcod] AS [iprvcod], 
+      [nota_list].[PrvRazon] AS [PrvRazon], 
+      [nota_list].[nmontoNota] AS [nmontoNota], 
+      [nota_list].[cestadoNota] AS [cestadoNota], 
+      [nota_list].[nmntutilizado] AS [nmntutilizado], 
+      [nota_list].[estado] AS [estado], 
+      [nota_list].[moneda] AS [moneda], 
+      [nota_list].[ctipNota] AS [ctipNota], 
+      [nota_list].[tiponota] AS [tiponota], 
+      [nota_list].[cobservaciones] AS [cobservaciones], 
+      [nota_list].[letra] AS [letra]
+      FROM [dbo].[nota_list] AS [nota_list]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Pag_pendientes" EntityType="AgrocomercioModel.Store.Pag_pendientes" store:Type="Views" store:Schema="dbo" store:Name="Pag_pendientes">
+      <DefiningQuery>SELECT 
+      [Pag_pendientes].[icodletra] AS [icodletra], 
+      [Pag_pendientes].[ult] AS [ult], 
+      [Pag_pendientes].[inumletra] AS [inumletra], 
+      [Pag_pendientes].[dfecEmi] AS [dfecEmi], 
+      [Pag_pendientes].[dfecvenc] AS [dfecvenc], 
+      [Pag_pendientes].[diaatr] AS [diaatr], 
+      [Pag_pendientes].[idetletra] AS [idetletra], 
+      [Pag_pendientes].[cod_vendedor] AS [cod_vendedor], 
+      [Pag_pendientes].[vendedor] AS [vendedor], 
+      [Pag_pendientes].[DeudTot] AS [DeudTot], 
+      [Pag_pendientes].[pagTotAcum] AS [pagTotAcum], 
+      [Pag_pendientes].[mntCuot] AS [mntCuot], 
+      [Pag_pendientes].[pagoCuot] AS [pagoCuot], 
+      [Pag_pendientes].[cod_cliente] AS [cod_cliente], 
+      [Pag_pendientes].[cliente] AS [cliente], 
+      [Pag_pendientes].[ctippago] AS [ctippago], 
+      [Pag_pendientes].[OpeTipo] AS [OpeTipo], 
+      [Pag_pendientes].[cmoneda] AS [cmoneda]
+      FROM [dbo].[Pag_pendientes] AS [Pag_pendientes]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="pag_pendnow" EntityType="AgrocomercioModel.Store.pag_pendnow" store:Type="Views" store:Schema="dbo" store:Name="pag_pendnow">
+      <DefiningQuery>SELECT 
+      [pag_pendnow].[icodletra] AS [icodletra], 
+      [pag_pendnow].[ult] AS [ult], 
+      [pag_pendnow].[inumletra] AS [inumletra], 
+      [pag_pendnow].[dfecEmi] AS [dfecEmi], 
+      [pag_pendnow].[dfecvenc] AS [dfecvenc], 
+      [pag_pendnow].[diaatr] AS [diaatr], 
+      [pag_pendnow].[idetletra] AS [idetletra], 
+      [pag_pendnow].[cod_vendedor] AS [cod_vendedor], 
+      [pag_pendnow].[vendedor] AS [vendedor], 
+      [pag_pendnow].[DeudTot] AS [DeudTot], 
+      [pag_pendnow].[pagTotAcum] AS [pagTotAcum], 
+      [pag_pendnow].[mntCuot] AS [mntCuot], 
+      [pag_pendnow].[pagoCuot] AS [pagoCuot], 
+      [pag_pendnow].[cod_cliente] AS [cod_cliente], 
+      [pag_pendnow].[cliente] AS [cliente], 
+      [pag_pendnow].[ctippago] AS [ctippago], 
+      [pag_pendnow].[OpeTipo] AS [OpeTipo], 
+      [pag_pendnow].[cmoneda] AS [cmoneda]
+      FROM [dbo].[pag_pendnow] AS [pag_pendnow]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="proveedor_letra" EntityType="AgrocomercioModel.Store.proveedor_letra" store:Type="Views" store:Schema="dbo" store:Name="proveedor_letra">
+      <DefiningQuery>SELECT 
+      [proveedor_letra].[tipo] AS [tipo], 
+      [proveedor_letra].[icodletra] AS [icodletra], 
+      [proveedor_letra].[valor] AS [valor], 
+      [proveedor_letra].[dfecemision] AS [dfecemision], 
+      [proveedor_letra].[dopCod] AS [dopCod], 
+      [proveedor_letra].[numfac] AS [numfac], 
+      [proveedor_letra].[PrvRazon] AS [PrvRazon], 
+      [proveedor_letra].[opetotpagar] AS [opetotpagar], 
+      [proveedor_letra].[PrvCod] AS [PrvCod], 
+      [proveedor_letra].[CMONEDA] AS [CMONEDA], 
+      [proveedor_letra].[ITOTCUOTA] AS [ITOTCUOTA], 
+      [proveedor_letra].[IESTADO] AS [IESTADO], 
+      [proveedor_letra].[mntletDol] AS [mntletDol], 
+      [proveedor_letra].[SalDol] AS [SalDol], 
+      [proveedor_letra].[MNTLTSOL] AS [MNTLTSOL], 
+      [proveedor_letra].[salsol] AS [salsol]
+      FROM [dbo].[proveedor_letra] AS [proveedor_letra]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="rel_not_fact" EntityType="AgrocomercioModel.Store.rel_not_fact" store:Type="Views" store:Schema="dbo" store:Name="rel_not_fact">
+      <DefiningQuery>SELECT 
+      [rel_not_fact].[inota] AS [inota], 
+      [rel_not_fact].[ccodnota] AS [ccodnota], 
+      [rel_not_fact].[dfecreg] AS [dfecreg], 
+      [rel_not_fact].[nmonto] AS [nmonto], 
+      [rel_not_fact].[dfecmod] AS [dfecmod], 
+      [rel_not_fact].[iusrcrc] AS [iusrcrc], 
+      [rel_not_fact].[irelnotfac] AS [irelnotfac], 
+      [rel_not_fact].[icodletra] AS [icodletra]
+      FROM [dbo].[rel_not_fact] AS [rel_not_fact]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="RepNotDet" EntityType="AgrocomercioModel.Store.RepNotDet" store:Type="Views" store:Schema="dbo" store:Name="RepNotDet">
+      <DefiningQuery>SELECT 
+      [RepNotDet].[valor] AS [valor], 
+      [RepNotDet].[TIPO] AS [TIPO], 
+      [RepNotDet].[inota] AS [inota], 
+      [RepNotDet].[ccodnota] AS [ccodnota], 
+      [RepNotDet].[FecEmesion] AS [FecEmesion], 
+      [RepNotDet].[iprvcod] AS [iprvcod], 
+      [RepNotDet].[PrvRazon] AS [PrvRazon], 
+      [RepNotDet].[cestadoNota] AS [cestadoNota], 
+      [RepNotDet].[estado] AS [estado], 
+      [RepNotDet].[COD_LETRA] AS [COD_LETRA], 
+      [RepNotDet].[factura] AS [factura], 
+      [RepNotDet].[nmntdolares] AS [nmntdolares], 
+      [RepNotDet].[nmntsoles] AS [nmntsoles], 
+      [RepNotDet].[nmntdolutl] AS [nmntdolutl], 
+      [RepNotDet].[nmntsolutl] AS [nmntsolutl], 
+      [RepNotDet].[moneda] AS [moneda]
+      FROM [dbo].[RepNotDet] AS [RepNotDet]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="RepNotGen" EntityType="AgrocomercioModel.Store.RepNotGen" store:Type="Views" store:Schema="dbo" store:Name="RepNotGen">
+      <DefiningQuery>SELECT 
+      [RepNotGen].[valor] AS [valor], 
+      [RepNotGen].[TIPO] AS [TIPO], 
+      [RepNotGen].[inota] AS [inota], 
+      [RepNotGen].[ccodnota] AS [ccodnota], 
+      [RepNotGen].[FecEmesion] AS [FecEmesion], 
+      [RepNotGen].[iprvcod] AS [iprvcod], 
+      [RepNotGen].[PrvRazon] AS [PrvRazon], 
+      [RepNotGen].[cestadoNota] AS [cestadoNota], 
+      [RepNotGen].[estado] AS [estado], 
+      [RepNotGen].[COD_LETRA] AS [COD_LETRA], 
+      [RepNotGen].[TOTFACT] AS [TOTFACT], 
+      [RepNotGen].[nmntdolares] AS [nmntdolares], 
+      [RepNotGen].[nmntsoles] AS [nmntsoles], 
+      [RepNotGen].[moneda] AS [moneda]
+      FROM [dbo].[RepNotGen] AS [RepNotGen]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vwList_let_detalle" EntityType="AgrocomercioModel.Store.vwList_let_detalle" store:Type="Views" store:Schema="dbo" store:Name="vwList_let_detalle">
+      <DefiningQuery>SELECT 
+      [vwList_let_detalle].[numfac] AS [numfac], 
+      [vwList_let_detalle].[dopFecEmision] AS [dopFecEmision], 
+      [vwList_let_detalle].[OpeTotPagar] AS [OpeTotPagar], 
+      [vwList_let_detalle].[saldo] AS [saldo], 
+      [vwList_let_detalle].[valor] AS [valor], 
+      [vwList_let_detalle].[numDoc] AS [numDoc], 
+      [vwList_let_detalle].[fac_acum] AS [fac_acum], 
+      [vwList_let_detalle].[codPer] AS [codPer], 
+      [vwList_let_detalle].[PrvRazon] AS [PrvRazon], 
+      [vwList_let_detalle].[FecEmesion] AS [FecEmesion], 
+      [vwList_let_detalle].[itotcuota] AS [itotcuota], 
+      [vwList_let_detalle].[nmontocuota] AS [nmontocuota], 
+      [vwList_let_detalle].[pagpendiente] AS [pagpendiente], 
+      [vwList_let_detalle].[cmoneda] AS [cmoneda], 
+      [vwList_let_detalle].[nintpag] AS [nintpag], 
+      [vwList_let_detalle].[estado] AS [estado], 
+      [vwList_let_detalle].[dfecultpago] AS [dfecultpago], 
+      [vwList_let_detalle].[fec_nxtpg] AS [fec_nxtpg], 
+      [vwList_let_detalle].[icodletra] AS [icodletra], 
+      [vwList_let_detalle].[ctippago] AS [ctippago], 
+      [vwList_let_detalle].[PerCod] AS [PerCod], 
+      [vwList_let_detalle].[TraNombre] AS [TraNombre]
+      FROM [dbo].[vwList_let_detalle] AS [vwList_let_detalle]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="det_letra_fk" Association="AgrocomercioModel.Store.det_letra_fk">
+      <End Role="letra" EntitySet="letra" />
+      <End Role="det_letra" EntitySet="det_letra" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Articulos_Proveedores" Association="AgrocomercioModel.Store.FK_Articulos_Proveedores">
+      <End Role="Proveedores" EntitySet="Proveedores" />
+      <End Role="Articulos" EntitySet="Articulos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ARTICULOS_UNIDADES" Association="AgrocomercioModel.Store.FK_ARTICULOS_UNIDADES">
+      <End Role="Unidades" EntitySet="Unidades" />
+      <End Role="Articulos" EntitySet="Articulos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_det_letra_letra" Association="AgrocomercioModel.Store.FK_det_letra_letra">
+      <End Role="letra" EntitySet="letra" />
+      <End Role="det_letra" EntitySet="det_letra" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DetOperacion_Articulos" Association="AgrocomercioModel.Store.FK_DetOperacion_Articulos">
+      <End Role="Articulos" EntitySet="Articulos" />
+      <End Role="DetOperacion" EntitySet="DetOperacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DetOperacion_LotesArt" Association="AgrocomercioModel.Store.FK_DetOperacion_LotesArt">
+      <End Role="LotesArt" EntitySet="LotesArt" />
+      <End Role="DetOperacion" EntitySet="DetOperacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DetOperacion_Operaciones" Association="AgrocomercioModel.Store.FK_DetOperacion_Operaciones">
+      <End Role="Operaciones" EntitySet="Operaciones" />
+      <End Role="DetOperacion" EntitySet="DetOperacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DetOperacion_Unidades" Association="AgrocomercioModel.Store.FK_DetOperacion_Unidades">
+      <End Role="Unidades" EntitySet="Unidades" />
+      <End Role="DetOperacion" EntitySet="DetOperacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DocumenOperacion_Operaciones" Association="AgrocomercioModel.Store.FK_DocumenOperacion_Operaciones">
+      <End Role="Operaciones" EntitySet="Operaciones" />
+      <End Role="DocumenOperacion" EntitySet="DocumenOperacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LISTAPRECIOS_ARTICULOS" Association="AgrocomercioModel.Store.FK_LISTAPRECIOS_ARTICULOS">
+      <End Role="Articulos" EntitySet="Articulos" />
+      <End Role="ListaPrecios" EntitySet="ListaPrecios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LotesArt_ListaPrecios" Association="AgrocomercioModel.Store.FK_LotesArt_ListaPrecios">
+      <End Role="ListaPrecios" EntitySet="ListaPrecios" />
+      <End Role="LotesArt" EntitySet="LotesArt" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Operaciones_Clientes" Association="AgrocomercioModel.Store.FK_Operaciones_Clientes">
+      <End Role="Clientes" EntitySet="Clientes" />
+      <End Role="Operaciones" EntitySet="Operaciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Operaciones_Personal" Association="AgrocomercioModel.Store.FK_Operaciones_Personal">
+      <End Role="Personal" EntitySet="Personal" />
+      <End Role="Operaciones" EntitySet="Operaciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Operaciones_Proveedores" Association="AgrocomercioModel.Store.FK_Operaciones_Proveedores">
+      <End Role="Proveedores" EntitySet="Proveedores" />
+      <End Role="Operaciones" EntitySet="Operaciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Operaciones_TipoCambios" Association="AgrocomercioModel.Store.FK_Operaciones_TipoCambios">
+      <End Role="TipoCambios" EntitySet="TipoCambios" />
+      <End Role="Operaciones" EntitySet="Operaciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Operaciones_Transportistas" Association="AgrocomercioModel.Store.FK_Operaciones_Transportistas">
+      <End Role="Transportistas" EntitySet="Transportistas" />
+      <End Role="Operaciones" EntitySet="Operaciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Personal_TipoPersonal" Association="AgrocomercioModel.Store.FK_Personal_TipoPersonal">
+      <End Role="TipoPersonal" EntitySet="TipoPersonal" />
+      <End Role="Personal" EntitySet="Personal" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuarios_Personal" Association="AgrocomercioModel.Store.FK_Usuarios_Personal">
+      <End Role="Personal" EntitySet="Personal" />
+      <End Role="Usuarios" EntitySet="Usuarios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuarios_Roles" Association="AgrocomercioModel.Store.FK_Usuarios_Roles">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="Usuarios" EntitySet="Usuarios" />
+    </AssociationSet>
+    <AssociationSet Name="rel_notfactura_fk2" Association="AgrocomercioModel.Store.rel_notfactura_fk2">
+      <End Role="Notas" EntitySet="Notas" />
+      <End Role="rel_notfactura" EntitySet="rel_notfactura" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Articulos">
+    <Key>
+      <PropertyRef Name="ArtCod" />
+    </Key>
+    <Property Name="ArtCod" Type="int" Nullable="false" />
+    <Property Name="PrvCod" Type="int" />
+    <Property Name="CodAnt" Type="varchar" MaxLength="10" />
+    <Property Name="ArtDescripcion" Type="nvarchar" Nullable="false" MaxLength="80" />
+    <Property Name="ArtStock" Type="numeric" Nullable="false" Scale="2" />
+    <Property Name="ArtStockFac" Type="numeric" Nullable="false" Scale="2" />
+    <Property Name="ArtCostoProm" Type="numeric" Scale="2" />
+    <Property Name="ArtStockMax" Type="numeric" Scale="2" />
+    <Property Name="ArtStockMin" Type="numeric" Scale="2" />
+    <Property Name="ArtPeso" Type="decimal" Scale="18" />
+    <Property Name="UniCod" Type="int" />
+    <Property Name="ArtFecRegis" Type="date" />
+    <Property Name="ArtFecModi" Type="date" />
+    <Property Name="Artestado" Type="bit" Nullable="false" />
+    <Property Name="ArtFecVen" Type="date" />
+  </EntityType>
+  <EntityType Name="Atributos">
+    <Key>
+      <PropertyRef Name="AtrTipoCod" />
+      <PropertyRef Name="AtrCodigo" />
+    </Key>
+    <Property Name="AtrTipoCod" Type="int" Nullable="false" />
+    <Property Name="AtrNivel" Type="int" />
+    <Property Name="AtrCodigo" Type="varchar" Nullable="false" MaxLength="3" />
+    <Property Name="AtrDescripcion" Type="varchar" MaxLength="100" />
+    <Property Name="AtrEstado" Type="bit" />
+  </EntityType>
+  <EntityType Name="Clientes">
+    <Key>
+      <PropertyRef Name="CliCod" />
+    </Key>
+    <Property Name="CliCod" Type="int" Nullable="false" />
+    <Property Name="CodAnt" Type="varchar" MaxLength="10" />
+    <Property Name="CliTipoPer" Type="nchar" MaxLength="1" />
+    <Property Name="CliTipoDoc" Type="nchar" MaxLength="3" />
+    <Property Name="CliNumDoc" Type="nvarchar" MaxLength="12" />
+    <Property Name="CliNombre" Type="nvarchar" MaxLength="80" />
+    <Property Name="CliDireccion" Type="nvarchar" MaxLength="150" />
+    <Property Name="CliTelefono" Type="nvarchar" MaxLength="18" />
+    <Property Name="CliRepresen" Type="nvarchar" MaxLength="50" />
+    <Property Name="CliFecRegis" Type="datetime" />
+    <Property Name="CliEstado" Type="bit" Nullable="false" />
+    <Property Name="CliCreAsig" Type="numeric" Scale="2" />
+  </EntityType>
+  <EntityType Name="det_letra">
+    <Key>
+      <PropertyRef Name="idetletra" />
+    </Key>
+    <Property Name="icodletra" Type="int" Nullable="false" />
+    <Property Name="inumletra" Type="int" Nullable="false" />
+    <Property Name="ccodletra" Type="varchar" MaxLength="10" />
+    <Property Name="nmonto" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="cestado" Type="varchar" MaxLength="1" />
+    <Property Name="ninteres" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="dfecvenc" Type="datetime" />
+    <Property Name="dfecpago" Type="datetime" />
+    <Property Name="dfecmod" Type="datetime" />
+    <Property Name="idetletra" Type="int" Nullable="false" />
+    <Property Name="cnumletra" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="DetOperacion">
+    <Key>
+      <PropertyRef Name="dtpCod" />
+    </Key>
+    <Property Name="dtpCod" Type="bigint" Nullable="false" />
+    <Property Name="OpeCod" Type="bigint" Nullable="false" />
+    <Property Name="ArtCod" Type="int" />
+    <Property Name="LotCod" Type="int" />
+    <Property Name="dtpCantidad" Type="numeric" Scale="2" />
+    <Property Name="dtpPrecioVen" Type="numeric" Scale="2" />
+    <Property Name="dtpDscto" Type="numeric" Scale="2" />
+    <Property Name="dtpSubTotal" Type="numeric" Scale="2" />
+    <Property Name="UniCod" Type="int" />
+    <Property Name="dtpEstado" Type="bit" />
+  </EntityType>
+  <EntityType Name="DocumenOperacion">
+    <Key>
+      <PropertyRef Name="dopCod" />
+    </Key>
+    <Property Name="dopCod" Type="bigint" Nullable="false" />
+    <Property Name="dopNroSerie" Type="varchar" MaxLength="3" />
+    <Property Name="dopNumero" Type="varchar" MaxLength="50" />
+    <Property Name="OpeCod" Type="bigint" Nullable="false" />
+    <Property Name="tdoCod" Type="int" Nullable="false" />
+    <Property Name="dopMoneda" Type="char" MaxLength="3" />
+    <Property Name="dopFecEmision" Type="smalldatetime" />
+    <Property Name="dopFecCancela" Type="smalldatetime" />
+    <Property Name="dopNroImpre" Type="int" />
+    <Property Name="dopFecUltImpre" Type="smalldatetime" />
+    <Property Name="dopEstado" Type="char" MaxLength="3" />
+    <Property Name="icodletra" Type="int" />
+  </EntityType>
+  <EntityType Name="letra">
+    <Key>
+      <PropertyRef Name="icodigo" />
+    </Key>
+    <Property Name="icodigo" Type="int" Nullable="false" />
+    <Property Name="itotcuota" Type="int" />
+    <Property Name="nmontocuota" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="cmoneda" Type="varchar" MaxLength="3" />
+    <Property Name="nintpag" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="iestado" Type="varchar" MaxLength="1" />
+    <Property Name="dfeccreacion" Type="datetime" />
+    <Property Name="dfecultpago" Type="datetime" />
+    <Property Name="dfecmod" Type="datetime" />
+    <Property Name="iusrCreacion" Type="int" />
+    <Property Name="ctippago" Type="varchar" MaxLength="1" />
+    <Property Name="nmntnota" Type="numeric" Precision="12" Scale="2" />
+  </EntityType>
+  <EntityType Name="ListaPrecios">
+    <Key>
+      <PropertyRef Name="LprCod" />
+    </Key>
+    <Property Name="LprCod" Type="int" Nullable="false" />
+    <Property Name="ArtCod" Type="int" Nullable="false" />
+    <Property Name="LprFecRegis" Type="datetime" />
+    <Property Name="LprPrecio" Type="numeric" Scale="2" />
+    <Property Name="LprDscto" Type="numeric" Scale="2" />
+    <Property Name="LprEstado" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LotesArt">
+    <Key>
+      <PropertyRef Name="LotCod" />
+    </Key>
+    <Property Name="LotCod" Type="int" Nullable="false" />
+    <Property Name="LotNro" Type="int" Nullable="false" />
+    <Property Name="LprCod" Type="int" Nullable="false" />
+    <Property Name="LotStock" Type="numeric" Scale="2" />
+    <Property Name="LotFecRegis" Type="date" />
+    <Property Name="LotFecVenci" Type="date" />
+    <Property Name="LotFecModi" Type="datetime" />
+    <Property Name="LotEstado" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Notas">
+    <Key>
+      <PropertyRef Name="inota" />
+    </Key>
+    <Property Name="ccodnota" Type="char" MaxLength="10" />
+    <Property Name="dfecreg" Type="datetime" />
+    <Property Name="iprvcod" Type="int" />
+    <Property Name="nmontoNota" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="cestadoNota" Type="varchar" MaxLength="1" />
+    <Property Name="nmntutilizado" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="inota" Type="int" Nullable="false" />
+    <Property Name="cobservaciones" Type="text" />
+    <Property Name="ctipo" Type="varchar" MaxLength="1" />
+    <Property Name="OpeMoneda" Type="char" MaxLength="3" />
+    <Property Name="ctipNota" Type="varchar" MaxLength="2" />
+  </EntityType>
+  <EntityType Name="Operaciones">
+    <Key>
+      <PropertyRef Name="OpeCod" />
+    </Key>
+    <Property Name="OpeCod" Type="bigint" Nullable="false" />
+    <Property Name="OpeTipo" Type="char" MaxLength="1" />
+    <Property Name="OpeFecEmision" Type="date" />
+    <Property Name="OpeFecCancela" Type="date" />
+    <Property Name="ZonCod" Type="int" />
+    <Property Name="PerCod" Type="int" />
+    <Property Name="TraCod" Type="int" />
+    <Property Name="CliCod" Type="int" />
+    <Property Name="PrvCod" Type="int" />
+    <Property Name="OpeMoneda" Type="char" MaxLength="3" />
+    <Property Name="OpeTipPago" Type="varchar" MaxLength="3" />
+    <Property Name="OpeSubTotal" Type="numeric" Scale="2" />
+    <Property Name="OpeDscto" Type="numeric" Scale="2" />
+    <Property Name="OpeFlete" Type="numeric" Scale="2" />
+    <Property Name="OpeImpuesto" Type="numeric" Scale="2" />
+    <Property Name="OpeTotal" Type="numeric" Scale="2" />
+    <Property Name="OpeEstado" Type="char" MaxLength="1" />
+    <Property Name="OpeModifica" Type="smalldatetime" />
+    <Property Name="UsrCod" Type="int" />
+    <Property Name="OpeTotPagPen" Type="numeric" Scale="2" />
+    <Property Name="OpeTotPagar" Type="numeric" Scale="2" />
+    <Property Name="nporDesc" Type="numeric" Precision="12" Scale="2" />
+    <Property Name="tcmCod" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Pag_letras">
+    <Key>
+      <PropertyRef Name="idpagletra" />
+    </Key>
+    <Property Name="idpagletra" Type="int" Nullable="false" />
+    <Property Name="idetletra" Type="int" />
+    <Property Name="nmonto" Type="numeric" Precision="8" Scale="2" />
+    <Property Name="dfecpago" Type="date" />
+    <Property Name="dfecmodifi" Type="datetime" />
+    <Property Name="ipercod" Type="int" />
+    <Property Name="icodpago" Type="int" />
+    <Property Name="inumRecibo" Type="char" MaxLength="20" />
+    <Property Name="cobservaciones" Type="varchar" MaxLength="100" />
+    <Property Name="ctipPag" Type="varchar" MaxLength="1" />
+    <Property Name="inumliq" Type="int" />
+  </EntityType>
+  <EntityType Name="Personal">
+    <Key>
+      <PropertyRef Name="perCod" />
+    </Key>
+    <Property Name="perCod" Type="int" Nullable="false" />
+    <Property Name="tpecod" Type="int" Nullable="false" />
+    <Property Name="perNombres" Type="varchar" MaxLength="50" />
+    <Property Name="perApellidoPat" Type="varchar" MaxLength="70" />
+    <Property Name="perApellidoMat" Type="varchar" MaxLength="70" />
+    <Property Name="perDireccion" Type="varchar" MaxLength="80" />
+    <Property Name="perTelefono" Type="varchar" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="Proveedores">
+    <Key>
+      <PropertyRef Name="PrvCod" />
+    </Key>
+    <Property Name="PrvCod" Type="int" Nullable="false" />
+    <Property Name="CodAnt" Type="varchar" MaxLength="10" />
+    <Property Name="PrvNumDoc" Type="nchar" MaxLength="12" />
+    <Property Name="PrvRazon" Type="nvarchar" Nullable="false" MaxLength="80" />
+    <Property Name="PrvDireccion" Type="nvarchar" MaxLength="150" />
+    <Property Name="PrvTelefono" Type="nvarchar" MaxLength="18" />
+    <Property Name="PrvContacto" Type="nvarchar" MaxLength="50" />
+    <Property Name="PrvFecRegis" Type="date" Nullable="false" />
+    <Property Name="PrvEstado" Type="bit" Nullable="false" />
+    <Property Name="PrvDscto" Type="numeric" Scale="3" />
+    <Property Name="PrvGanancia" Type="numeric" Scale="3" />
+  </EntityType>
+  <EntityType Name="rel_notfactura">
+    <Key>
+      <PropertyRef Name="irelnotfac" />
+    </Key>
+    <Property Name="idtpcod" Type="bigint" />
+    <Property Name="inota" Type="int" />
+    <Property Name="nmonto" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="dfecmod" Type="datetime" />
+    <Property Name="iusrcrc" Type="int" />
+    <Property Name="irelnotfac" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="rolCod" />
+    </Key>
+    <Property Name="rolCod" Type="int" Nullable="false" />
+    <Property Name="rolDescripcion" Type="varchar" MaxLength="50" />
+    <Property Name="rolOpcionCrear" Type="bit" />
+    <Property Name="rolOpcionModificar" Type="bit" />
+    <Property Name="rolOpcionEliminar" Type="bit" />
+    <Property Name="rolMenu" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbliqCobranza">
+    <Key>
+      <PropertyRef Name="idliqcob" />
+    </Key>
+    <Property Name="idliqcob" Type="int" Nullable="false" />
+    <Property Name="fecreg" Type="date" />
+    <Property Name="fecmin" Type="date" />
+    <Property Name="fecmax" Type="date" />
+    <Property Name="efectivo" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="ctaViatico" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="depositos" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="GastVarios" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="cheques" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="inefectivo" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="efectivodol" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="ctaViaticodol" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="depositosdol" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="GastVariosdol" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="chequesdol" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="inefectivodol" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="observaciones" Type="text" />
+    <Property Name="idrecibidor" Type="int" />
+    <Property Name="totsoles" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="totdolares" Type="numeric" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="TipoCambios">
+    <Key>
+      <PropertyRef Name="tcmCod" />
+    </Key>
+    <Property Name="tcmCod" Type="int" Nullable="false" />
+    <Property Name="tcmMoneda" Type="varchar" MaxLength="4" />
+    <Property Name="tcmCambio" Type="numeric" Precision="12" Scale="2" />
+    <Property Name="tcmFecha" Type="date" />
+    <Property Name="tcmfecmod" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TipoPersonal">
+    <Key>
+      <PropertyRef Name="tpeCod" />
+    </Key>
+    <Property Name="tpeCod" Type="int" Nullable="false" />
+    <Property Name="tpeDescripcion" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Transportistas">
+    <Key>
+      <PropertyRef Name="TraCod" />
+    </Key>
+    <Property Name="TraCod" Type="int" Nullable="false" />
+    <Property Name="TraRuc" Type="varchar" Nullable="false" MaxLength="12" />
+    <Property Name="TraRazonSocial" Type="varchar" Nullable="false" MaxLength="80" />
+    <Property Name="TraDireccion" Type="varchar" MaxLength="100" />
+    <Property Name="TraTelefono" Type="varchar" MaxLength="15" />
+    <Property Name="TraFecRegis" Type="date" />
+    <Property Name="TraEstado" Type="bit" />
+  </EntityType>
+  <EntityType Name="Ubigeos">
+    <Key>
+      <PropertyRef Name="UbiCod" />
+    </Key>
+    <Property Name="UbiCod" Type="char" Nullable="false" MaxLength="6" />
+    <Property Name="UbiDescripcion" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Unidades">
+    <Key>
+      <PropertyRef Name="UniCod" />
+    </Key>
+    <Property Name="UniCod" Type="int" Nullable="false" />
+    <Property Name="UniDescripcion" Type="nvarchar" MaxLength="50" />
+    <Property Name="UniAbrev" Type="nvarchar" MaxLength="15" />
+    <Property Name="UniFactor" Type="numeric" Scale="4" />
+    <Property Name="UniSuperior" Type="int" Nullable="false" />
+    <Property Name="UniEstado" Type="bit" />
+    <Property Name="UniFecRegis" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Usuarios">
+    <Key>
+      <PropertyRef Name="usrCod" />
+    </Key>
+    <Property Name="usrCod" Type="int" Nullable="false" />
+    <Property Name="perCod" Type="int" />
+    <Property Name="usrLogin" Type="varchar" MaxLength="10" />
+    <Property Name="usrClave" Type="varchar" MaxLength="10" />
+    <Property Name="RolCod" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'Agrocomercio.dbo.cab_letra' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="cab_letra">
+    <Key>
+      <PropertyRef Name="icodigo" />
+    </Key>
+    <Property Name="valor" Type="char" MaxLength="1" />
+    <Property Name="icodigo" Type="int" Nullable="false" />
+    <Property Name="numDoc" Type="varchar" MaxLength="14" />
+    <Property Name="PrvRazon" Type="nvarchar" MaxLength="80" />
+    <Property Name="FecEmesion" Type="nvarchar" MaxLength="30" />
+    <Property Name="itotcuota" Type="int" />
+    <Property Name="nmontocuota" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="opetotPagpen" Type="numeric" Scale="2" />
+    <Property Name="cmoneda" Type="varchar" MaxLength="3" />
+    <Property Name="nintpag" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="estado" Type="varchar" MaxLength="7" />
+    <Property Name="dfecultpago" Type="nvarchar" MaxLength="30" />
+    <Property Name="fec_nxtpg" Type="datetime" />
+    <Property Name="ctippago" Type="varchar" MaxLength="1" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'Agrocomercio.dbo.detalle_pagos' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="detalle_pagos">
+    <Key>
+      <PropertyRef Name="idetletra" />
+      <PropertyRef Name="icodletra" />
+      <PropertyRef Name="inumletra" />
+      <PropertyRef Name="ult" />
+    </Key>
+    <Property Name="vendedor" Type="varchar" MaxLength="50" />
+    <Property Name="ccodletra" Type="varchar" MaxLength="10" />
+    <Property Name="cnumletra" Type="varchar" MaxLength="20" />
+    <Property Name="cnumcuota" Type="varchar" MaxLength="24" />
+    <Property Name="CliNombre" Type="nvarchar" MaxLength="80" />
+    <Property Name="OpeFecEmision" Type="date" />
+    <Property Name="dfecvenc" Type="date" />
+    <Property Name="dfecpago" Type="date" />
+    <Property Name="diaatr" Type="int" />
+    <Property Name="cmoneda" Type="varchar" MaxLength="3" />
+    <Property Name="total" Type="numeric" Scale="2" />
+    <Property Name="saldo" Type="numeric" Scale="2" />
+    <Property Name="PAG_TOTAL" Type="numeric" Precision="38" Scale="2" />
+    <Property Name="mnt_cuota" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="saldo_cuota" Type="numeric" Precision="38" Scale="2" />
+    <Property Name="pag_cuota" Type="numeric" Precision="38" Scale="2" />
+    <Property Name="ninteres" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="traCod" Type="int" />
+    <Property Name="OpeTipo" Type="char" MaxLength="1" />
+    <Property Name="cestado" Type="varchar" MaxLength="1" />
+    <Property Name="idetletra" Type="int" Nullable="false" />
+    <Property Name="icodletra" Type="int" Nullable="false" />
+    <Property Name="inumletra" Type="int" Nullable="false" />
+    <Property Name="cli_cod" Type="int" />
+    <Property Name="ult" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'Agrocomercio.dbo.detalle_pagos_now' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="detalle_pagos_now">
+    <Key>
+      <PropertyRef Name="idetletra" />
+      <PropertyRef Name="icodletra" />
+      <PropertyRef Name="inumletra" />
+      <PropertyRef Name="ult" />
+    </Key>
+    <Property Name="vendedor" Type="varchar" MaxLength="50" />
+    <Property Name="ccodletra" Type="varchar" MaxLength="10" />
+    <Property Name="cnumletra" Type="varchar" MaxLength="20" />
+    <Property Name="cnumcuota" Type="varchar" MaxLength="24" />
+    <Property Name="CliNombre" Type="nvarchar" MaxLength="80" />
+    <Property Name="OpeFecEmision" Type="date" />
+    <Property Name="dfecvenc" Type="date" />
+    <Property Name="dfecpago" Type="date" />
+    <Property Name="diaatr" Type="int" />
+    <Property Name="cmoneda" Type="varchar" MaxLength="3" />
+    <Property Name="total" Type="numeric" Precision="38" Scale="2" />
+    <Property Name="saldo" Type="numeric" Precision="38" Scale="2" />
+    <Property Name="PAG_TOTAL" Type="numeric" Precision="38" Scale="2" />
+    <Property Name="mnt_cuota" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="saldo_cuota" Type="numeric" Precision="38" Scale="2" />
+    <Property Name="pag_cuota" Type="numeric" Precision="38" Scale="2" />
+    <Property Name="ninteres" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="traCod" Type="int" />
+    <Property Name="OpeTipo" Type="char" MaxLength="1" />
+    <Property Name="cestado" Type="varchar" MaxLength="1" />
+    <Property Name="idetletra" Type="int" Nullable="false" />
+    <Property Name="icodletra" Type="int" Nullable="false" />
+    <Property Name="inumletra" Type="int" Nullable="false" />
+    <Property Name="cli_cod" Type="int" />
+    <Property Name="ult" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'Agrocomercio.dbo.fac_pnd_let' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="fac_pnd_let">
+    <Key>
+      <PropertyRef Name="dopCod" />
+    </Key>
+    <Property Name="valor" Type="char" MaxLength="1" />
+    <Property Name="dfecemision" Type="date" />
+    <Property Name="dopCod" Type="bigint" Nullable="false" />
+    <Property Name="numfac" Type="varchar" MaxLength="54" />
+    <Property Name="PrvRazon" Type="nvarchar" MaxLength="80" />
+    <Property Name="opetotpagar" Type="numeric" Scale="2" />
+    <Property Name="OpeTotal" Type="numeric" Scale="2" />
+    <Property Name="PrvCod" Type="int" />
+    <Property Name="monedas" Type="char" MaxLength="3" />
+    <Property Name="percod" Type="int" />
+    <Property Name="tranom" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'Agrocomercio.dbo.fac_x_letra' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="fac_x_letra">
+    <Key>
+      <PropertyRef Name="dopCod" />
+    </Key>
+    <Property Name="icodletra" Type="int" />
+    <Property Name="valor" Type="char" MaxLength="1" />
+    <Property Name="dfecemision" Type="date" />
+    <Property Name="dopCod" Type="bigint" Nullable="false" />
+    <Property Name="numfac" Type="varchar" MaxLength="54" />
+    <Property Name="PrvRazon" Type="nvarchar" MaxLength="80" />
+    <Property Name="opetotpagar" Type="numeric" Scale="2" />
+    <Property Name="OpeTotal" Type="numeric" Scale="2" />
+    <Property Name="PrvCod" Type="int" />
+    <Property Name="monedas" Type="char" MaxLength="3" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'Agrocomercio.dbo.list_detLetra' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="list_detLetra">
+    <Key>
+      <PropertyRef Name="PrvRazon" />
+      <PropertyRef Name="estado" />
+      <PropertyRef Name="icodletra" />
+      <PropertyRef Name="idetletra" />
+    </Key>
+    <Property Name="valor" Type="char" MaxLength="1" />
+    <Property Name="dfecven" Type="datetime" />
+    <Property Name="cuota" Type="varchar" MaxLength="64" />
+    <Property Name="ccodletra" Type="varchar" MaxLength="10" />
+    <Property Name="cnumletra" Type="varchar" MaxLength="20" />
+    <Property Name="PrvRazon" Type="nvarchar" Nullable="false" MaxLength="80" />
+    <Property Name="estado" Type="varchar" Nullable="false" MaxLength="7" />
+    <Property Name="dfecpag" Type="nvarchar" MaxLength="30" />
+    <Property Name="cmoneda" Type="varchar" MaxLength="3" />
+    <Property Name="mnt_cuota" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="mnt_letra" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="Saldo_total" Type="numeric" Precision="38" Scale="2" />
+    <Property Name="ninteres" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="PrvCod" Type="int" />
+    <Property Name="cestado" Type="varchar" MaxLength="1" />
+    <Property Name="icodletra" Type="int" Nullable="false" />
+    <Property Name="idetletra" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'Agrocomercio.dbo.list_letra' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="list_letra">
+    <Key>
+      <PropertyRef Name="icodletra" />
+    </Key>
+    <Property Name="valor" Type="char" MaxLength="1" />
+    <Property Name="numDoc" Type="varchar" MaxLength="4" />
+    <Property Name="fac_acum" Type="int" />
+    <Property Name="codPer" Type="int" />
+    <Property Name="PrvRazon" Type="nvarchar" MaxLength="80" />
+    <Property Name="FecEmesion" Type="date" />
+    <Property Name="itotcuota" Type="int" />
+    <Property Name="nmontocuota" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="pagpendiente" Type="numeric" Precision="38" Scale="2" />
+    <Property Name="cmoneda" Type="varchar" MaxLength="3" />
+    <Property Name="nintpag" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="estado" Type="varchar" MaxLength="4" />
+    <Property Name="dfecultpago" Type="date" />
+    <Property Name="fec_nxtpg" Type="date" />
+    <Property Name="icodletra" Type="int" Nullable="false" />
+    <Property Name="ctippago" Type="varchar" MaxLength="1" />
+    <Property Name="PerCod" Type="int" />
+    <Property Name="TraNombre" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'Agrocomercio.dbo.nota_list' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="nota_list">
+    <Key>
+      <PropertyRef Name="inota" />
+      <PropertyRef Name="estado" />
+    </Key>
+    <Property Name="valor" Type="varchar" MaxLength="1" />
+    <Property Name="inota" Type="int" Nullable="false" />
+    <Property Name="ccodnota" Type="char" MaxLength="10" />
+    <Property Name="FecEmesion" Type="date" />
+    <Property Name="iprvcod" Type="int" />
+    <Property Name="PrvRazon" Type="nvarchar" MaxLength="80" />
+    <Property Name="nmontoNota" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="cestadoNota" Type="varchar" MaxLength="1" />
+    <Property Name="nmntutilizado" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="estado" Type="varchar" Nullable="false" MaxLength="22" />
+    <Property Name="moneda" Type="char" MaxLength="3" />
+    <Property Name="ctipNota" Type="varchar" MaxLength="2" />
+    <Property Name="tiponota" Type="varchar" MaxLength="100" />
+    <Property Name="cobservaciones" Type="text" />
+    <Property Name="letra" Type="bigint" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'Agrocomercio.dbo.Pag_pendientes' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="Pag_pendientes">
+    <Key>
+      <PropertyRef Name="icodletra" />
+      <PropertyRef Name="ult" />
+      <PropertyRef Name="idetletra" />
+    </Key>
+    <Property Name="icodletra" Type="int" Nullable="false" />
+    <Property Name="ult" Type="int" Nullable="false" />
+    <Property Name="inumletra" Type="varchar" MaxLength="24" />
+    <Property Name="dfecEmi" Type="date" />
+    <Property Name="dfecvenc" Type="date" />
+    <Property Name="diaatr" Type="int" />
+    <Property Name="idetletra" Type="int" Nullable="false" />
+    <Property Name="cod_vendedor" Type="int" />
+    <Property Name="vendedor" Type="varchar" MaxLength="192" />
+    <Property Name="DeudTot" Type="numeric" Precision="38" Scale="2" />
+    <Property Name="pagTotAcum" Type="numeric" Precision="38" Scale="2" />
+    <Property Name="mntCuot" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="pagoCuot" Type="numeric" Precision="38" Scale="2" />
+    <Property Name="cod_cliente" Type="int" />
+    <Property Name="cliente" Type="nvarchar" MaxLength="80" />
+    <Property Name="ctippago" Type="varchar" MaxLength="1" />
+    <Property Name="OpeTipo" Type="char" MaxLength="1" />
+    <Property Name="cmoneda" Type="varchar" MaxLength="3" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'Agrocomercio.dbo.pag_pendnow' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="pag_pendnow">
+    <Key>
+      <PropertyRef Name="icodletra" />
+      <PropertyRef Name="ult" />
+      <PropertyRef Name="idetletra" />
+    </Key>
+    <Property Name="icodletra" Type="int" Nullable="false" />
+    <Property Name="ult" Type="int" Nullable="false" />
+    <Property Name="inumletra" Type="varchar" MaxLength="24" />
+    <Property Name="dfecEmi" Type="date" />
+    <Property Name="dfecvenc" Type="date" />
+    <Property Name="diaatr" Type="int" />
+    <Property Name="idetletra" Type="int" Nullable="false" />
+    <Property Name="cod_vendedor" Type="int" />
+    <Property Name="vendedor" Type="varchar" MaxLength="192" />
+    <Property Name="DeudTot" Type="numeric" Precision="38" Scale="2" />
+    <Property Name="pagTotAcum" Type="numeric" Precision="38" Scale="2" />
+    <Property Name="mntCuot" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="pagoCuot" Type="numeric" Precision="38" Scale="2" />
+    <Property Name="cod_cliente" Type="int" />
+    <Property Name="cliente" Type="nvarchar" MaxLength="80" />
+    <Property Name="ctippago" Type="varchar" MaxLength="1" />
+    <Property Name="OpeTipo" Type="char" MaxLength="1" />
+    <Property Name="cmoneda" Type="varchar" MaxLength="3" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'Agrocomercio.dbo.proveedor_letra' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="proveedor_letra">
+    <Key>
+      <PropertyRef Name="tipo" />
+    </Key>
+    <Property Name="tipo" Type="varchar" Nullable="false" MaxLength="1" />
+    <Property Name="icodletra" Type="int" />
+    <Property Name="valor" Type="char" MaxLength="1" />
+    <Property Name="dfecemision" Type="nvarchar" MaxLength="30" />
+    <Property Name="dopCod" Type="bigint" />
+    <Property Name="numfac" Type="varchar" MaxLength="54" />
+    <Property Name="PrvRazon" Type="nvarchar" MaxLength="80" />
+    <Property Name="opetotpagar" Type="numeric" Scale="2" />
+    <Property Name="PrvCod" Type="int" />
+    <Property Name="CMONEDA" Type="varchar" MaxLength="3" />
+    <Property Name="ITOTCUOTA" Type="varchar" MaxLength="24" />
+    <Property Name="IESTADO" Type="varchar" MaxLength="3" />
+    <Property Name="mntletDol" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="SalDol" Type="numeric" Precision="38" Scale="2" />
+    <Property Name="MNTLTSOL" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="salsol" Type="numeric" Precision="38" Scale="2" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'Agrocomercio.dbo.rel_not_fact' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="rel_not_fact">
+    <Key>
+      <PropertyRef Name="irelnotfac" />
+    </Key>
+    <Property Name="inota" Type="int" />
+    <Property Name="ccodnota" Type="char" MaxLength="10" />
+    <Property Name="dfecreg" Type="nvarchar" MaxLength="30" />
+    <Property Name="nmonto" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="dfecmod" Type="datetime" />
+    <Property Name="iusrcrc" Type="int" />
+    <Property Name="irelnotfac" Type="int" Nullable="false" />
+    <Property Name="icodletra" Type="bigint" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'Agrocomercio.dbo.RepNotDet' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="RepNotDet">
+    <Key>
+      <PropertyRef Name="TIPO" />
+      <PropertyRef Name="inota" />
+      <PropertyRef Name="estado" />
+    </Key>
+    <Property Name="valor" Type="varchar" MaxLength="1" />
+    <Property Name="TIPO" Type="varchar" Nullable="false" MaxLength="11" />
+    <Property Name="inota" Type="int" Nullable="false" />
+    <Property Name="ccodnota" Type="char" MaxLength="10" />
+    <Property Name="FecEmesion" Type="date" />
+    <Property Name="iprvcod" Type="int" />
+    <Property Name="PrvRazon" Type="nvarchar" MaxLength="80" />
+    <Property Name="cestadoNota" Type="varchar" MaxLength="1" />
+    <Property Name="estado" Type="varchar" Nullable="false" MaxLength="22" />
+    <Property Name="COD_LETRA" Type="bigint" />
+    <Property Name="factura" Type="varchar" MaxLength="54" />
+    <Property Name="nmntdolares" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="nmntsoles" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="nmntdolutl" Type="numeric" Precision="19" Scale="2" />
+    <Property Name="nmntsolutl" Type="numeric" Precision="19" Scale="2" />
+    <Property Name="moneda" Type="char" MaxLength="3" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'Agrocomercio.dbo.RepNotGen' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="RepNotGen">
+    <Key>
+      <PropertyRef Name="TIPO" />
+      <PropertyRef Name="inota" />
+      <PropertyRef Name="estado" />
+    </Key>
+    <Property Name="valor" Type="varchar" MaxLength="1" />
+    <Property Name="TIPO" Type="varchar" Nullable="false" MaxLength="11" />
+    <Property Name="inota" Type="int" Nullable="false" />
+    <Property Name="ccodnota" Type="char" MaxLength="10" />
+    <Property Name="FecEmesion" Type="date" />
+    <Property Name="iprvcod" Type="int" />
+    <Property Name="PrvRazon" Type="nvarchar" MaxLength="80" />
+    <Property Name="cestadoNota" Type="varchar" MaxLength="1" />
+    <Property Name="estado" Type="varchar" Nullable="false" MaxLength="22" />
+    <Property Name="COD_LETRA" Type="bigint" />
+    <Property Name="TOTFACT" Type="int" />
+    <Property Name="nmntdolares" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="nmntsoles" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="moneda" Type="char" MaxLength="3" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'Agrocomercio.dbo.vwList_let_detalle' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="vwList_let_detalle">
+    <Key>
+      <PropertyRef Name="icodletra" />
+    </Key>
+    <Property Name="numfac" Type="varchar" MaxLength="54" />
+    <Property Name="dopFecEmision" Type="smalldatetime" />
+    <Property Name="OpeTotPagar" Type="numeric" Scale="2" />
+    <Property Name="saldo" Type="numeric" Scale="2" />
+    <Property Name="valor" Type="char" MaxLength="1" />
+    <Property Name="numDoc" Type="varchar" MaxLength="4" />
+    <Property Name="fac_acum" Type="int" />
+    <Property Name="codPer" Type="int" />
+    <Property Name="PrvRazon" Type="nvarchar" MaxLength="80" />
+    <Property Name="FecEmesion" Type="date" />
+    <Property Name="itotcuota" Type="int" />
+    <Property Name="nmontocuota" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="pagpendiente" Type="numeric" Precision="38" Scale="2" />
+    <Property Name="cmoneda" Type="varchar" MaxLength="3" />
+    <Property Name="nintpag" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="estado" Type="varchar" MaxLength="4" />
+    <Property Name="dfecultpago" Type="date" />
+    <Property Name="fec_nxtpg" Type="date" />
+    <Property Name="icodletra" Type="int" Nullable="false" />
+    <Property Name="ctippago" Type="varchar" MaxLength="1" />
+    <Property Name="PerCod" Type="int" />
+    <Property Name="TraNombre" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="det_letra_fk">
+    <End Role="letra" Type="AgrocomercioModel.Store.letra" Multiplicity="1" />
+    <End Role="det_letra" Type="AgrocomercioModel.Store.det_letra" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="letra">
+        <PropertyRef Name="icodigo" />
+      </Principal>
+      <Dependent Role="det_letra">
+        <PropertyRef Name="icodletra" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Articulos_Proveedores">
+    <End Role="Proveedores" Type="AgrocomercioModel.Store.Proveedores" Multiplicity="0..1" />
+    <End Role="Articulos" Type="AgrocomercioModel.Store.Articulos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Proveedores">
+        <PropertyRef Name="PrvCod" />
+      </Principal>
+      <Dependent Role="Articulos">
+        <PropertyRef Name="PrvCod" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ARTICULOS_UNIDADES">
+    <End Role="Unidades" Type="AgrocomercioModel.Store.Unidades" Multiplicity="0..1" />
+    <End Role="Articulos" Type="AgrocomercioModel.Store.Articulos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Unidades">
+        <PropertyRef Name="UniCod" />
+      </Principal>
+      <Dependent Role="Articulos">
+        <PropertyRef Name="UniCod" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_det_letra_letra">
+    <End Role="letra" Type="AgrocomercioModel.Store.letra" Multiplicity="1" />
+    <End Role="det_letra" Type="AgrocomercioModel.Store.det_letra" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="letra">
+        <PropertyRef Name="icodigo" />
+      </Principal>
+      <Dependent Role="det_letra">
+        <PropertyRef Name="icodletra" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DetOperacion_Articulos">
+    <End Role="Articulos" Type="AgrocomercioModel.Store.Articulos" Multiplicity="0..1" />
+    <End Role="DetOperacion" Type="AgrocomercioModel.Store.DetOperacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Articulos">
+        <PropertyRef Name="ArtCod" />
+      </Principal>
+      <Dependent Role="DetOperacion">
+        <PropertyRef Name="ArtCod" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DetOperacion_LotesArt">
+    <End Role="LotesArt" Type="AgrocomercioModel.Store.LotesArt" Multiplicity="0..1" />
+    <End Role="DetOperacion" Type="AgrocomercioModel.Store.DetOperacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LotesArt">
+        <PropertyRef Name="LotCod" />
+      </Principal>
+      <Dependent Role="DetOperacion">
+        <PropertyRef Name="LotCod" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DetOperacion_Operaciones">
+    <End Role="Operaciones" Type="AgrocomercioModel.Store.Operaciones" Multiplicity="1" />
+    <End Role="DetOperacion" Type="AgrocomercioModel.Store.DetOperacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Operaciones">
+        <PropertyRef Name="OpeCod" />
+      </Principal>
+      <Dependent Role="DetOperacion">
+        <PropertyRef Name="OpeCod" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DetOperacion_Unidades">
+    <End Role="Unidades" Type="AgrocomercioModel.Store.Unidades" Multiplicity="0..1" />
+    <End Role="DetOperacion" Type="AgrocomercioModel.Store.DetOperacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Unidades">
+        <PropertyRef Name="UniCod" />
+      </Principal>
+      <Dependent Role="DetOperacion">
+        <PropertyRef Name="UniCod" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DocumenOperacion_Operaciones">
+    <End Role="Operaciones" Type="AgrocomercioModel.Store.Operaciones" Multiplicity="1" />
+    <End Role="DocumenOperacion" Type="AgrocomercioModel.Store.DocumenOperacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Operaciones">
+        <PropertyRef Name="OpeCod" />
+      </Principal>
+      <Dependent Role="DocumenOperacion">
+        <PropertyRef Name="OpeCod" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LISTAPRECIOS_ARTICULOS">
+    <End Role="Articulos" Type="AgrocomercioModel.Store.Articulos" Multiplicity="1" />
+    <End Role="ListaPrecios" Type="AgrocomercioModel.Store.ListaPrecios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Articulos">
+        <PropertyRef Name="ArtCod" />
+      </Principal>
+      <Dependent Role="ListaPrecios">
+        <PropertyRef Name="ArtCod" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LotesArt_ListaPrecios">
+    <End Role="ListaPrecios" Type="AgrocomercioModel.Store.ListaPrecios" Multiplicity="1" />
+    <End Role="LotesArt" Type="AgrocomercioModel.Store.LotesArt" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListaPrecios">
+        <PropertyRef Name="LprCod" />
+      </Principal>
+      <Dependent Role="LotesArt">
+        <PropertyRef Name="LprCod" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Operaciones_Clientes">
+    <End Role="Clientes" Type="AgrocomercioModel.Store.Clientes" Multiplicity="0..1" />
+    <End Role="Operaciones" Type="AgrocomercioModel.Store.Operaciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clientes">
+        <PropertyRef Name="CliCod" />
+      </Principal>
+      <Dependent Role="Operaciones">
+        <PropertyRef Name="CliCod" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Operaciones_Personal">
+    <End Role="Personal" Type="AgrocomercioModel.Store.Personal" Multiplicity="0..1" />
+    <End Role="Operaciones" Type="AgrocomercioModel.Store.Operaciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Personal">
+        <PropertyRef Name="perCod" />
+      </Principal>
+      <Dependent Role="Operaciones">
+        <PropertyRef Name="PerCod" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Operaciones_Proveedores">
+    <End Role="Proveedores" Type="AgrocomercioModel.Store.Proveedores" Multiplicity="0..1" />
+    <End Role="Operaciones" Type="AgrocomercioModel.Store.Operaciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Proveedores">
+        <PropertyRef Name="PrvCod" />
+      </Principal>
+      <Dependent Role="Operaciones">
+        <PropertyRef Name="PrvCod" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Operaciones_TipoCambios">
+    <End Role="TipoCambios" Type="AgrocomercioModel.Store.TipoCambios" Multiplicity="1" />
+    <End Role="Operaciones" Type="AgrocomercioModel.Store.Operaciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoCambios">
+        <PropertyRef Name="tcmCod" />
+      </Principal>
+      <Dependent Role="Operaciones">
+        <PropertyRef Name="tcmCod" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Operaciones_Transportistas">
+    <End Role="Transportistas" Type="AgrocomercioModel.Store.Transportistas" Multiplicity="0..1" />
+    <End Role="Operaciones" Type="AgrocomercioModel.Store.Operaciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Transportistas">
+        <PropertyRef Name="TraCod" />
+      </Principal>
+      <Dependent Role="Operaciones">
+        <PropertyRef Name="TraCod" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Personal_TipoPersonal">
+    <End Role="TipoPersonal" Type="AgrocomercioModel.Store.TipoPersonal" Multiplicity="1" />
+    <End Role="Personal" Type="AgrocomercioModel.Store.Personal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoPersonal">
+        <PropertyRef Name="tpeCod" />
+      </Principal>
+      <Dependent Role="Personal">
+        <PropertyRef Name="tpecod" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuarios_Personal">
+    <End Role="Personal" Type="AgrocomercioModel.Store.Personal" Multiplicity="0..1" />
+    <End Role="Usuarios" Type="AgrocomercioModel.Store.Usuarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Personal">
+        <PropertyRef Name="perCod" />
+      </Principal>
+      <Dependent Role="Usuarios">
+        <PropertyRef Name="perCod" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuarios_Roles">
+    <End Role="Roles" Type="AgrocomercioModel.Store.Roles" Multiplicity="0..1" />
+    <End Role="Usuarios" Type="AgrocomercioModel.Store.Usuarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="rolCod" />
+      </Principal>
+      <Dependent Role="Usuarios">
+        <PropertyRef Name="RolCod" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="rel_notfactura_fk2">
+    <End Role="Notas" Type="AgrocomercioModel.Store.Notas" Multiplicity="0..1" />
+    <End Role="rel_notfactura" Type="AgrocomercioModel.Store.rel_notfactura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Notas">
+        <PropertyRef Name="inota" />
+      </Principal>
+      <Dependent Role="rel_notfactura">
+        <PropertyRef Name="inota" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

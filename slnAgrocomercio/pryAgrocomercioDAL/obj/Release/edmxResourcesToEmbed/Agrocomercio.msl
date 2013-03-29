@@ -1,0 +1,694 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AgrocomercioModelStoreContainer" CdmEntityContainer="AgrocomercioEntities">
+    <EntitySetMapping Name="Articulos">
+      <EntityTypeMapping TypeName="AgrocomercioModel.Articulos">
+        <MappingFragment StoreEntitySet="Articulos">
+          <ScalarProperty Name="ArtFecVen" ColumnName="ArtFecVen" />
+          <ScalarProperty Name="Artestado" ColumnName="Artestado" />
+          <ScalarProperty Name="ArtFecModi" ColumnName="ArtFecModi" />
+          <ScalarProperty Name="ArtFecRegis" ColumnName="ArtFecRegis" />
+          <ScalarProperty Name="UniCod" ColumnName="UniCod" />
+          <ScalarProperty Name="ArtPeso" ColumnName="ArtPeso" />
+          <ScalarProperty Name="ArtStockMin" ColumnName="ArtStockMin" />
+          <ScalarProperty Name="ArtStockMax" ColumnName="ArtStockMax" />
+          <ScalarProperty Name="ArtCostoProm" ColumnName="ArtCostoProm" />
+          <ScalarProperty Name="ArtStockFac" ColumnName="ArtStockFac" />
+          <ScalarProperty Name="ArtStock" ColumnName="ArtStock" />
+          <ScalarProperty Name="ArtDescripcion" ColumnName="ArtDescripcion" />
+          <ScalarProperty Name="CodAnt" ColumnName="CodAnt" />
+          <ScalarProperty Name="PrvCod" ColumnName="PrvCod" />
+          <ScalarProperty Name="ArtCod" ColumnName="ArtCod" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Atributos">
+      <EntityTypeMapping TypeName="AgrocomercioModel.Atributos">
+        <MappingFragment StoreEntitySet="Atributos">
+          <ScalarProperty Name="AtrEstado" ColumnName="AtrEstado" />
+          <ScalarProperty Name="AtrDescripcion" ColumnName="AtrDescripcion" />
+          <ScalarProperty Name="AtrCodigo" ColumnName="AtrCodigo" />
+          <ScalarProperty Name="AtrNivel" ColumnName="AtrNivel" />
+          <ScalarProperty Name="AtrTipoCod" ColumnName="AtrTipoCod" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Clientes">
+      <EntityTypeMapping TypeName="AgrocomercioModel.Clientes">
+        <MappingFragment StoreEntitySet="Clientes">
+          <ScalarProperty Name="CliCreAsig" ColumnName="CliCreAsig" />
+          <ScalarProperty Name="CliEstado" ColumnName="CliEstado" />
+          <ScalarProperty Name="CliFecRegis" ColumnName="CliFecRegis" />
+          <ScalarProperty Name="CliRepresen" ColumnName="CliRepresen" />
+          <ScalarProperty Name="CliTelefono" ColumnName="CliTelefono" />
+          <ScalarProperty Name="CliDireccion" ColumnName="CliDireccion" />
+          <ScalarProperty Name="CliNombre" ColumnName="CliNombre" />
+          <ScalarProperty Name="CliNumDoc" ColumnName="CliNumDoc" />
+          <ScalarProperty Name="CliTipoDoc" ColumnName="CliTipoDoc" />
+          <ScalarProperty Name="CliTipoPer" ColumnName="CliTipoPer" />
+          <ScalarProperty Name="CodAnt" ColumnName="CodAnt" />
+          <ScalarProperty Name="CliCod" ColumnName="CliCod" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="det_letra">
+      <EntityTypeMapping TypeName="AgrocomercioModel.det_letra">
+        <MappingFragment StoreEntitySet="det_letra">
+          <ScalarProperty Name="cnumletra" ColumnName="cnumletra" />
+          <ScalarProperty Name="idetletra" ColumnName="idetletra" />
+          <ScalarProperty Name="dfecmod" ColumnName="dfecmod" />
+          <ScalarProperty Name="dfecpago" ColumnName="dfecpago" />
+          <ScalarProperty Name="dfecvenc" ColumnName="dfecvenc" />
+          <ScalarProperty Name="ninteres" ColumnName="ninteres" />
+          <ScalarProperty Name="cestado" ColumnName="cestado" />
+          <ScalarProperty Name="nmonto" ColumnName="nmonto" />
+          <ScalarProperty Name="ccodletra" ColumnName="ccodletra" />
+          <ScalarProperty Name="inumletra" ColumnName="inumletra" />
+          <ScalarProperty Name="icodletra" ColumnName="icodletra" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DetOperacion">
+      <EntityTypeMapping TypeName="AgrocomercioModel.DetOperacion">
+        <MappingFragment StoreEntitySet="DetOperacion">
+          <ScalarProperty Name="dtpEstado" ColumnName="dtpEstado" />
+          <ScalarProperty Name="UniCod" ColumnName="UniCod" />
+          <ScalarProperty Name="dtpSubTotal" ColumnName="dtpSubTotal" />
+          <ScalarProperty Name="dtpDscto" ColumnName="dtpDscto" />
+          <ScalarProperty Name="dtpPrecioVen" ColumnName="dtpPrecioVen" />
+          <ScalarProperty Name="dtpCantidad" ColumnName="dtpCantidad" />
+          <ScalarProperty Name="LotCod" ColumnName="LotCod" />
+          <ScalarProperty Name="ArtCod" ColumnName="ArtCod" />
+          <ScalarProperty Name="OpeCod" ColumnName="OpeCod" />
+          <ScalarProperty Name="dtpCod" ColumnName="dtpCod" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DocumenOperacion">
+      <EntityTypeMapping TypeName="AgrocomercioModel.DocumenOperacion">
+        <MappingFragment StoreEntitySet="DocumenOperacion">
+          <ScalarProperty Name="icodletra" ColumnName="icodletra" />
+          <ScalarProperty Name="dopEstado" ColumnName="dopEstado" />
+          <ScalarProperty Name="dopFecUltImpre" ColumnName="dopFecUltImpre" />
+          <ScalarProperty Name="dopNroImpre" ColumnName="dopNroImpre" />
+          <ScalarProperty Name="dopFecCancela" ColumnName="dopFecCancela" />
+          <ScalarProperty Name="dopFecEmision" ColumnName="dopFecEmision" />
+          <ScalarProperty Name="dopMoneda" ColumnName="dopMoneda" />
+          <ScalarProperty Name="tdoCod" ColumnName="tdoCod" />
+          <ScalarProperty Name="OpeCod" ColumnName="OpeCod" />
+          <ScalarProperty Name="dopNumero" ColumnName="dopNumero" />
+          <ScalarProperty Name="dopNroSerie" ColumnName="dopNroSerie" />
+          <ScalarProperty Name="dopCod" ColumnName="dopCod" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="letra">
+      <EntityTypeMapping TypeName="AgrocomercioModel.letra">
+        <MappingFragment StoreEntitySet="letra">
+          <ScalarProperty Name="nmntnota" ColumnName="nmntnota" />
+          <ScalarProperty Name="ctippago" ColumnName="ctippago" />
+          <ScalarProperty Name="iusrCreacion" ColumnName="iusrCreacion" />
+          <ScalarProperty Name="dfecmod" ColumnName="dfecmod" />
+          <ScalarProperty Name="dfecultpago" ColumnName="dfecultpago" />
+          <ScalarProperty Name="dfeccreacion" ColumnName="dfeccreacion" />
+          <ScalarProperty Name="iestado" ColumnName="iestado" />
+          <ScalarProperty Name="nintpag" ColumnName="nintpag" />
+          <ScalarProperty Name="cmoneda" ColumnName="cmoneda" />
+          <ScalarProperty Name="nmontocuota" ColumnName="nmontocuota" />
+          <ScalarProperty Name="itotcuota" ColumnName="itotcuota" />
+          <ScalarProperty Name="icodigo" ColumnName="icodigo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ListaPrecios">
+      <EntityTypeMapping TypeName="AgrocomercioModel.ListaPrecios">
+        <MappingFragment StoreEntitySet="ListaPrecios">
+          <ScalarProperty Name="LprEstado" ColumnName="LprEstado" />
+          <ScalarProperty Name="LprDscto" ColumnName="LprDscto" />
+          <ScalarProperty Name="LprPrecio" ColumnName="LprPrecio" />
+          <ScalarProperty Name="LprFecRegis" ColumnName="LprFecRegis" />
+          <ScalarProperty Name="ArtCod" ColumnName="ArtCod" />
+          <ScalarProperty Name="LprCod" ColumnName="LprCod" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LotesArt">
+      <EntityTypeMapping TypeName="AgrocomercioModel.LotesArt">
+        <MappingFragment StoreEntitySet="LotesArt">
+          <ScalarProperty Name="LotEstado" ColumnName="LotEstado" />
+          <ScalarProperty Name="LotFecModi" ColumnName="LotFecModi" />
+          <ScalarProperty Name="LotFecVenci" ColumnName="LotFecVenci" />
+          <ScalarProperty Name="LotFecRegis" ColumnName="LotFecRegis" />
+          <ScalarProperty Name="LotStock" ColumnName="LotStock" />
+          <ScalarProperty Name="LprCod" ColumnName="LprCod" />
+          <ScalarProperty Name="LotNro" ColumnName="LotNro" />
+          <ScalarProperty Name="LotCod" ColumnName="LotCod" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Notas">
+      <EntityTypeMapping TypeName="AgrocomercioModel.Notas">
+        <MappingFragment StoreEntitySet="Notas">
+          <ScalarProperty Name="ctipNota" ColumnName="ctipNota" />
+          <ScalarProperty Name="OpeMoneda" ColumnName="OpeMoneda" />
+          <ScalarProperty Name="ctipo" ColumnName="ctipo" />
+          <ScalarProperty Name="cobservaciones" ColumnName="cobservaciones" />
+          <ScalarProperty Name="inota" ColumnName="inota" />
+          <ScalarProperty Name="nmntutilizado" ColumnName="nmntutilizado" />
+          <ScalarProperty Name="cestadoNota" ColumnName="cestadoNota" />
+          <ScalarProperty Name="nmontoNota" ColumnName="nmontoNota" />
+          <ScalarProperty Name="iprvcod" ColumnName="iprvcod" />
+          <ScalarProperty Name="dfecreg" ColumnName="dfecreg" />
+          <ScalarProperty Name="ccodnota" ColumnName="ccodnota" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Operaciones">
+      <EntityTypeMapping TypeName="AgrocomercioModel.Operaciones">
+        <MappingFragment StoreEntitySet="Operaciones">
+          <ScalarProperty Name="tcmCod" ColumnName="tcmCod" />
+          <ScalarProperty Name="nporDesc" ColumnName="nporDesc" />
+          <ScalarProperty Name="OpeTotPagar" ColumnName="OpeTotPagar" />
+          <ScalarProperty Name="OpeTotPagPen" ColumnName="OpeTotPagPen" />
+          <ScalarProperty Name="UsrCod" ColumnName="UsrCod" />
+          <ScalarProperty Name="OpeModifica" ColumnName="OpeModifica" />
+          <ScalarProperty Name="OpeEstado" ColumnName="OpeEstado" />
+          <ScalarProperty Name="OpeTotal" ColumnName="OpeTotal" />
+          <ScalarProperty Name="OpeImpuesto" ColumnName="OpeImpuesto" />
+          <ScalarProperty Name="OpeFlete" ColumnName="OpeFlete" />
+          <ScalarProperty Name="OpeDscto" ColumnName="OpeDscto" />
+          <ScalarProperty Name="OpeSubTotal" ColumnName="OpeSubTotal" />
+          <ScalarProperty Name="OpeTipPago" ColumnName="OpeTipPago" />
+          <ScalarProperty Name="OpeMoneda" ColumnName="OpeMoneda" />
+          <ScalarProperty Name="PrvCod" ColumnName="PrvCod" />
+          <ScalarProperty Name="CliCod" ColumnName="CliCod" />
+          <ScalarProperty Name="TraCod" ColumnName="TraCod" />
+          <ScalarProperty Name="PerCod" ColumnName="PerCod" />
+          <ScalarProperty Name="ZonCod" ColumnName="ZonCod" />
+          <ScalarProperty Name="OpeFecCancela" ColumnName="OpeFecCancela" />
+          <ScalarProperty Name="OpeFecEmision" ColumnName="OpeFecEmision" />
+          <ScalarProperty Name="OpeTipo" ColumnName="OpeTipo" />
+          <ScalarProperty Name="OpeCod" ColumnName="OpeCod" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pag_letras">
+      <EntityTypeMapping TypeName="AgrocomercioModel.Pag_letras">
+        <MappingFragment StoreEntitySet="Pag_letras">
+          <ScalarProperty Name="inumliq" ColumnName="inumliq" />
+          <ScalarProperty Name="ctipPag" ColumnName="ctipPag" />
+          <ScalarProperty Name="cobservaciones" ColumnName="cobservaciones" />
+          <ScalarProperty Name="inumRecibo" ColumnName="inumRecibo" />
+          <ScalarProperty Name="icodpago" ColumnName="icodpago" />
+          <ScalarProperty Name="ipercod" ColumnName="ipercod" />
+          <ScalarProperty Name="dfecmodifi" ColumnName="dfecmodifi" />
+          <ScalarProperty Name="dfecpago" ColumnName="dfecpago" />
+          <ScalarProperty Name="nmonto" ColumnName="nmonto" />
+          <ScalarProperty Name="idetletra" ColumnName="idetletra" />
+          <ScalarProperty Name="idpagletra" ColumnName="idpagletra" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Personal">
+      <EntityTypeMapping TypeName="AgrocomercioModel.Personal">
+        <MappingFragment StoreEntitySet="Personal">
+          <ScalarProperty Name="perTelefono" ColumnName="perTelefono" />
+          <ScalarProperty Name="perDireccion" ColumnName="perDireccion" />
+          <ScalarProperty Name="perApellidoMat" ColumnName="perApellidoMat" />
+          <ScalarProperty Name="perApellidoPat" ColumnName="perApellidoPat" />
+          <ScalarProperty Name="perNombres" ColumnName="perNombres" />
+          <ScalarProperty Name="tpecod" ColumnName="tpecod" />
+          <ScalarProperty Name="perCod" ColumnName="perCod" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Proveedores">
+      <EntityTypeMapping TypeName="AgrocomercioModel.Proveedores">
+        <MappingFragment StoreEntitySet="Proveedores">
+          <ScalarProperty Name="PrvGanancia" ColumnName="PrvGanancia" />
+          <ScalarProperty Name="PrvDscto" ColumnName="PrvDscto" />
+          <ScalarProperty Name="PrvEstado" ColumnName="PrvEstado" />
+          <ScalarProperty Name="PrvFecRegis" ColumnName="PrvFecRegis" />
+          <ScalarProperty Name="PrvContacto" ColumnName="PrvContacto" />
+          <ScalarProperty Name="PrvTelefono" ColumnName="PrvTelefono" />
+          <ScalarProperty Name="PrvDireccion" ColumnName="PrvDireccion" />
+          <ScalarProperty Name="PrvRazon" ColumnName="PrvRazon" />
+          <ScalarProperty Name="PrvNumDoc" ColumnName="PrvNumDoc" />
+          <ScalarProperty Name="CodAnt" ColumnName="CodAnt" />
+          <ScalarProperty Name="PrvCod" ColumnName="PrvCod" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rel_notfactura">
+      <EntityTypeMapping TypeName="AgrocomercioModel.rel_notfactura">
+        <MappingFragment StoreEntitySet="rel_notfactura">
+          <ScalarProperty Name="irelnotfac" ColumnName="irelnotfac" />
+          <ScalarProperty Name="iusrcrc" ColumnName="iusrcrc" />
+          <ScalarProperty Name="dfecmod" ColumnName="dfecmod" />
+          <ScalarProperty Name="nmonto" ColumnName="nmonto" />
+          <ScalarProperty Name="inota" ColumnName="inota" />
+          <ScalarProperty Name="idtpcod" ColumnName="idtpcod" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="AgrocomercioModel.Roles">
+        <MappingFragment StoreEntitySet="Roles">
+          <ScalarProperty Name="rolMenu" ColumnName="rolMenu" />
+          <ScalarProperty Name="rolOpcionEliminar" ColumnName="rolOpcionEliminar" />
+          <ScalarProperty Name="rolOpcionModificar" ColumnName="rolOpcionModificar" />
+          <ScalarProperty Name="rolOpcionCrear" ColumnName="rolOpcionCrear" />
+          <ScalarProperty Name="rolDescripcion" ColumnName="rolDescripcion" />
+          <ScalarProperty Name="rolCod" ColumnName="rolCod" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbliqCobranza">
+      <EntityTypeMapping TypeName="AgrocomercioModel.tbliqCobranza">
+        <MappingFragment StoreEntitySet="tbliqCobranza">
+          <ScalarProperty Name="totdolares" ColumnName="totdolares" />
+          <ScalarProperty Name="totsoles" ColumnName="totsoles" />
+          <ScalarProperty Name="idrecibidor" ColumnName="idrecibidor" />
+          <ScalarProperty Name="observaciones" ColumnName="observaciones" />
+          <ScalarProperty Name="inefectivodol" ColumnName="inefectivodol" />
+          <ScalarProperty Name="chequesdol" ColumnName="chequesdol" />
+          <ScalarProperty Name="GastVariosdol" ColumnName="GastVariosdol" />
+          <ScalarProperty Name="depositosdol" ColumnName="depositosdol" />
+          <ScalarProperty Name="ctaViaticodol" ColumnName="ctaViaticodol" />
+          <ScalarProperty Name="efectivodol" ColumnName="efectivodol" />
+          <ScalarProperty Name="inefectivo" ColumnName="inefectivo" />
+          <ScalarProperty Name="cheques" ColumnName="cheques" />
+          <ScalarProperty Name="GastVarios" ColumnName="GastVarios" />
+          <ScalarProperty Name="depositos" ColumnName="depositos" />
+          <ScalarProperty Name="ctaViatico" ColumnName="ctaViatico" />
+          <ScalarProperty Name="efectivo" ColumnName="efectivo" />
+          <ScalarProperty Name="fecmax" ColumnName="fecmax" />
+          <ScalarProperty Name="fecmin" ColumnName="fecmin" />
+          <ScalarProperty Name="fecreg" ColumnName="fecreg" />
+          <ScalarProperty Name="idliqcob" ColumnName="idliqcob" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoCambios">
+      <EntityTypeMapping TypeName="AgrocomercioModel.TipoCambios">
+        <MappingFragment StoreEntitySet="TipoCambios">
+          <ScalarProperty Name="tcmfecmod" ColumnName="tcmfecmod" />
+          <ScalarProperty Name="tcmFecha" ColumnName="tcmFecha" />
+          <ScalarProperty Name="tcmCambio" ColumnName="tcmCambio" />
+          <ScalarProperty Name="tcmMoneda" ColumnName="tcmMoneda" />
+          <ScalarProperty Name="tcmCod" ColumnName="tcmCod" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoPersonal">
+      <EntityTypeMapping TypeName="AgrocomercioModel.TipoPersonal">
+        <MappingFragment StoreEntitySet="TipoPersonal">
+          <ScalarProperty Name="tpeDescripcion" ColumnName="tpeDescripcion" />
+          <ScalarProperty Name="tpeCod" ColumnName="tpeCod" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Transportistas">
+      <EntityTypeMapping TypeName="AgrocomercioModel.Transportistas">
+        <MappingFragment StoreEntitySet="Transportistas">
+          <ScalarProperty Name="TraEstado" ColumnName="TraEstado" />
+          <ScalarProperty Name="TraFecRegis" ColumnName="TraFecRegis" />
+          <ScalarProperty Name="TraTelefono" ColumnName="TraTelefono" />
+          <ScalarProperty Name="TraDireccion" ColumnName="TraDireccion" />
+          <ScalarProperty Name="TraRazonSocial" ColumnName="TraRazonSocial" />
+          <ScalarProperty Name="TraRuc" ColumnName="TraRuc" />
+          <ScalarProperty Name="TraCod" ColumnName="TraCod" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ubigeos">
+      <EntityTypeMapping TypeName="AgrocomercioModel.Ubigeos">
+        <MappingFragment StoreEntitySet="Ubigeos">
+          <ScalarProperty Name="UbiDescripcion" ColumnName="UbiDescripcion" />
+          <ScalarProperty Name="UbiCod" ColumnName="UbiCod" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Unidades">
+      <EntityTypeMapping TypeName="AgrocomercioModel.Unidades">
+        <MappingFragment StoreEntitySet="Unidades">
+          <ScalarProperty Name="UniFecRegis" ColumnName="UniFecRegis" />
+          <ScalarProperty Name="UniEstado" ColumnName="UniEstado" />
+          <ScalarProperty Name="UniSuperior" ColumnName="UniSuperior" />
+          <ScalarProperty Name="UniFactor" ColumnName="UniFactor" />
+          <ScalarProperty Name="UniAbrev" ColumnName="UniAbrev" />
+          <ScalarProperty Name="UniDescripcion" ColumnName="UniDescripcion" />
+          <ScalarProperty Name="UniCod" ColumnName="UniCod" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuarios">
+      <EntityTypeMapping TypeName="AgrocomercioModel.Usuarios">
+        <MappingFragment StoreEntitySet="Usuarios">
+          <ScalarProperty Name="RolCod" ColumnName="RolCod" />
+          <ScalarProperty Name="usrClave" ColumnName="usrClave" />
+          <ScalarProperty Name="usrLogin" ColumnName="usrLogin" />
+          <ScalarProperty Name="perCod" ColumnName="perCod" />
+          <ScalarProperty Name="usrCod" ColumnName="usrCod" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cab_letra">
+      <EntityTypeMapping TypeName="AgrocomercioModel.cab_letra">
+        <MappingFragment StoreEntitySet="cab_letra">
+          <ScalarProperty Name="ctippago" ColumnName="ctippago" />
+          <ScalarProperty Name="fec_nxtpg" ColumnName="fec_nxtpg" />
+          <ScalarProperty Name="dfecultpago" ColumnName="dfecultpago" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="nintpag" ColumnName="nintpag" />
+          <ScalarProperty Name="cmoneda" ColumnName="cmoneda" />
+          <ScalarProperty Name="opetotPagpen" ColumnName="opetotPagpen" />
+          <ScalarProperty Name="nmontocuota" ColumnName="nmontocuota" />
+          <ScalarProperty Name="itotcuota" ColumnName="itotcuota" />
+          <ScalarProperty Name="FecEmesion" ColumnName="FecEmesion" />
+          <ScalarProperty Name="PrvRazon" ColumnName="PrvRazon" />
+          <ScalarProperty Name="numDoc" ColumnName="numDoc" />
+          <ScalarProperty Name="icodigo" ColumnName="icodigo" />
+          <ScalarProperty Name="valor" ColumnName="valor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="detalle_pagos">
+      <EntityTypeMapping TypeName="AgrocomercioModel.detalle_pagos">
+        <MappingFragment StoreEntitySet="detalle_pagos">
+          <ScalarProperty Name="ult" ColumnName="ult" />
+          <ScalarProperty Name="cli_cod" ColumnName="cli_cod" />
+          <ScalarProperty Name="inumletra" ColumnName="inumletra" />
+          <ScalarProperty Name="icodletra" ColumnName="icodletra" />
+          <ScalarProperty Name="idetletra" ColumnName="idetletra" />
+          <ScalarProperty Name="cestado" ColumnName="cestado" />
+          <ScalarProperty Name="OpeTipo" ColumnName="OpeTipo" />
+          <ScalarProperty Name="traCod" ColumnName="traCod" />
+          <ScalarProperty Name="ninteres" ColumnName="ninteres" />
+          <ScalarProperty Name="pag_cuota" ColumnName="pag_cuota" />
+          <ScalarProperty Name="saldo_cuota" ColumnName="saldo_cuota" />
+          <ScalarProperty Name="mnt_cuota" ColumnName="mnt_cuota" />
+          <ScalarProperty Name="PAG_TOTAL" ColumnName="PAG_TOTAL" />
+          <ScalarProperty Name="saldo" ColumnName="saldo" />
+          <ScalarProperty Name="total" ColumnName="total" />
+          <ScalarProperty Name="cmoneda" ColumnName="cmoneda" />
+          <ScalarProperty Name="diaatr" ColumnName="diaatr" />
+          <ScalarProperty Name="dfecpago" ColumnName="dfecpago" />
+          <ScalarProperty Name="dfecvenc" ColumnName="dfecvenc" />
+          <ScalarProperty Name="OpeFecEmision" ColumnName="OpeFecEmision" />
+          <ScalarProperty Name="CliNombre" ColumnName="CliNombre" />
+          <ScalarProperty Name="cnumcuota" ColumnName="cnumcuota" />
+          <ScalarProperty Name="cnumletra" ColumnName="cnumletra" />
+          <ScalarProperty Name="ccodletra" ColumnName="ccodletra" />
+          <ScalarProperty Name="vendedor" ColumnName="vendedor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="detalle_pagos_now">
+      <EntityTypeMapping TypeName="AgrocomercioModel.detalle_pagos_now">
+        <MappingFragment StoreEntitySet="detalle_pagos_now">
+          <ScalarProperty Name="ult" ColumnName="ult" />
+          <ScalarProperty Name="cli_cod" ColumnName="cli_cod" />
+          <ScalarProperty Name="inumletra" ColumnName="inumletra" />
+          <ScalarProperty Name="icodletra" ColumnName="icodletra" />
+          <ScalarProperty Name="idetletra" ColumnName="idetletra" />
+          <ScalarProperty Name="cestado" ColumnName="cestado" />
+          <ScalarProperty Name="OpeTipo" ColumnName="OpeTipo" />
+          <ScalarProperty Name="traCod" ColumnName="traCod" />
+          <ScalarProperty Name="ninteres" ColumnName="ninteres" />
+          <ScalarProperty Name="pag_cuota" ColumnName="pag_cuota" />
+          <ScalarProperty Name="saldo_cuota" ColumnName="saldo_cuota" />
+          <ScalarProperty Name="mnt_cuota" ColumnName="mnt_cuota" />
+          <ScalarProperty Name="PAG_TOTAL" ColumnName="PAG_TOTAL" />
+          <ScalarProperty Name="saldo" ColumnName="saldo" />
+          <ScalarProperty Name="total" ColumnName="total" />
+          <ScalarProperty Name="cmoneda" ColumnName="cmoneda" />
+          <ScalarProperty Name="diaatr" ColumnName="diaatr" />
+          <ScalarProperty Name="dfecpago" ColumnName="dfecpago" />
+          <ScalarProperty Name="dfecvenc" ColumnName="dfecvenc" />
+          <ScalarProperty Name="OpeFecEmision" ColumnName="OpeFecEmision" />
+          <ScalarProperty Name="CliNombre" ColumnName="CliNombre" />
+          <ScalarProperty Name="cnumcuota" ColumnName="cnumcuota" />
+          <ScalarProperty Name="cnumletra" ColumnName="cnumletra" />
+          <ScalarProperty Name="ccodletra" ColumnName="ccodletra" />
+          <ScalarProperty Name="vendedor" ColumnName="vendedor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="fac_pnd_let">
+      <EntityTypeMapping TypeName="AgrocomercioModel.fac_pnd_let">
+        <MappingFragment StoreEntitySet="fac_pnd_let">
+          <ScalarProperty Name="tranom" ColumnName="tranom" />
+          <ScalarProperty Name="percod" ColumnName="percod" />
+          <ScalarProperty Name="monedas" ColumnName="monedas" />
+          <ScalarProperty Name="PrvCod" ColumnName="PrvCod" />
+          <ScalarProperty Name="OpeTotal" ColumnName="OpeTotal" />
+          <ScalarProperty Name="opetotpagar" ColumnName="opetotpagar" />
+          <ScalarProperty Name="PrvRazon" ColumnName="PrvRazon" />
+          <ScalarProperty Name="numfac" ColumnName="numfac" />
+          <ScalarProperty Name="dopCod" ColumnName="dopCod" />
+          <ScalarProperty Name="dfecemision" ColumnName="dfecemision" />
+          <ScalarProperty Name="valor" ColumnName="valor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="fac_x_letra">
+      <EntityTypeMapping TypeName="AgrocomercioModel.fac_x_letra">
+        <MappingFragment StoreEntitySet="fac_x_letra">
+          <ScalarProperty Name="monedas" ColumnName="monedas" />
+          <ScalarProperty Name="PrvCod" ColumnName="PrvCod" />
+          <ScalarProperty Name="OpeTotal" ColumnName="OpeTotal" />
+          <ScalarProperty Name="opetotpagar" ColumnName="opetotpagar" />
+          <ScalarProperty Name="PrvRazon" ColumnName="PrvRazon" />
+          <ScalarProperty Name="numfac" ColumnName="numfac" />
+          <ScalarProperty Name="dopCod" ColumnName="dopCod" />
+          <ScalarProperty Name="dfecemision" ColumnName="dfecemision" />
+          <ScalarProperty Name="valor" ColumnName="valor" />
+          <ScalarProperty Name="icodletra" ColumnName="icodletra" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="list_detLetra">
+      <EntityTypeMapping TypeName="AgrocomercioModel.list_detLetra">
+        <MappingFragment StoreEntitySet="list_detLetra">
+          <ScalarProperty Name="idetletra" ColumnName="idetletra" />
+          <ScalarProperty Name="icodletra" ColumnName="icodletra" />
+          <ScalarProperty Name="cestado" ColumnName="cestado" />
+          <ScalarProperty Name="PrvCod" ColumnName="PrvCod" />
+          <ScalarProperty Name="ninteres" ColumnName="ninteres" />
+          <ScalarProperty Name="Saldo_total" ColumnName="Saldo_total" />
+          <ScalarProperty Name="mnt_letra" ColumnName="mnt_letra" />
+          <ScalarProperty Name="mnt_cuota" ColumnName="mnt_cuota" />
+          <ScalarProperty Name="cmoneda" ColumnName="cmoneda" />
+          <ScalarProperty Name="dfecpag" ColumnName="dfecpag" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="PrvRazon" ColumnName="PrvRazon" />
+          <ScalarProperty Name="cnumletra" ColumnName="cnumletra" />
+          <ScalarProperty Name="ccodletra" ColumnName="ccodletra" />
+          <ScalarProperty Name="cuota" ColumnName="cuota" />
+          <ScalarProperty Name="dfecven" ColumnName="dfecven" />
+          <ScalarProperty Name="valor" ColumnName="valor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="list_letra">
+      <EntityTypeMapping TypeName="AgrocomercioModel.list_letra">
+        <MappingFragment StoreEntitySet="list_letra">
+          <ScalarProperty Name="TraNombre" ColumnName="TraNombre" />
+          <ScalarProperty Name="PerCod" ColumnName="PerCod" />
+          <ScalarProperty Name="ctippago" ColumnName="ctippago" />
+          <ScalarProperty Name="icodletra" ColumnName="icodletra" />
+          <ScalarProperty Name="fec_nxtpg" ColumnName="fec_nxtpg" />
+          <ScalarProperty Name="dfecultpago" ColumnName="dfecultpago" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="nintpag" ColumnName="nintpag" />
+          <ScalarProperty Name="cmoneda" ColumnName="cmoneda" />
+          <ScalarProperty Name="pagpendiente" ColumnName="pagpendiente" />
+          <ScalarProperty Name="nmontocuota" ColumnName="nmontocuota" />
+          <ScalarProperty Name="itotcuota" ColumnName="itotcuota" />
+          <ScalarProperty Name="FecEmesion" ColumnName="FecEmesion" />
+          <ScalarProperty Name="PrvRazon" ColumnName="PrvRazon" />
+          <ScalarProperty Name="codPer" ColumnName="codPer" />
+          <ScalarProperty Name="fac_acum" ColumnName="fac_acum" />
+          <ScalarProperty Name="numDoc" ColumnName="numDoc" />
+          <ScalarProperty Name="valor" ColumnName="valor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="nota_list">
+      <EntityTypeMapping TypeName="AgrocomercioModel.nota_list">
+        <MappingFragment StoreEntitySet="nota_list">
+          <ScalarProperty Name="letra" ColumnName="letra" />
+          <ScalarProperty Name="cobservaciones" ColumnName="cobservaciones" />
+          <ScalarProperty Name="tiponota" ColumnName="tiponota" />
+          <ScalarProperty Name="ctipNota" ColumnName="ctipNota" />
+          <ScalarProperty Name="moneda" ColumnName="moneda" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="nmntutilizado" ColumnName="nmntutilizado" />
+          <ScalarProperty Name="cestadoNota" ColumnName="cestadoNota" />
+          <ScalarProperty Name="nmontoNota" ColumnName="nmontoNota" />
+          <ScalarProperty Name="PrvRazon" ColumnName="PrvRazon" />
+          <ScalarProperty Name="iprvcod" ColumnName="iprvcod" />
+          <ScalarProperty Name="FecEmesion" ColumnName="FecEmesion" />
+          <ScalarProperty Name="ccodnota" ColumnName="ccodnota" />
+          <ScalarProperty Name="inota" ColumnName="inota" />
+          <ScalarProperty Name="valor" ColumnName="valor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pag_pendientes">
+      <EntityTypeMapping TypeName="AgrocomercioModel.Pag_pendientes">
+        <MappingFragment StoreEntitySet="Pag_pendientes">
+          <ScalarProperty Name="cmoneda" ColumnName="cmoneda" />
+          <ScalarProperty Name="OpeTipo" ColumnName="OpeTipo" />
+          <ScalarProperty Name="ctippago" ColumnName="ctippago" />
+          <ScalarProperty Name="cliente" ColumnName="cliente" />
+          <ScalarProperty Name="cod_cliente" ColumnName="cod_cliente" />
+          <ScalarProperty Name="pagoCuot" ColumnName="pagoCuot" />
+          <ScalarProperty Name="mntCuot" ColumnName="mntCuot" />
+          <ScalarProperty Name="pagTotAcum" ColumnName="pagTotAcum" />
+          <ScalarProperty Name="DeudTot" ColumnName="DeudTot" />
+          <ScalarProperty Name="vendedor" ColumnName="vendedor" />
+          <ScalarProperty Name="cod_vendedor" ColumnName="cod_vendedor" />
+          <ScalarProperty Name="idetletra" ColumnName="idetletra" />
+          <ScalarProperty Name="diaatr" ColumnName="diaatr" />
+          <ScalarProperty Name="dfecvenc" ColumnName="dfecvenc" />
+          <ScalarProperty Name="dfecEmi" ColumnName="dfecEmi" />
+          <ScalarProperty Name="inumletra" ColumnName="inumletra" />
+          <ScalarProperty Name="ult" ColumnName="ult" />
+          <ScalarProperty Name="icodletra" ColumnName="icodletra" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pag_pendnow">
+      <EntityTypeMapping TypeName="AgrocomercioModel.pag_pendnow">
+        <MappingFragment StoreEntitySet="pag_pendnow">
+          <ScalarProperty Name="cmoneda" ColumnName="cmoneda" />
+          <ScalarProperty Name="OpeTipo" ColumnName="OpeTipo" />
+          <ScalarProperty Name="ctippago" ColumnName="ctippago" />
+          <ScalarProperty Name="cliente" ColumnName="cliente" />
+          <ScalarProperty Name="cod_cliente" ColumnName="cod_cliente" />
+          <ScalarProperty Name="pagoCuot" ColumnName="pagoCuot" />
+          <ScalarProperty Name="mntCuot" ColumnName="mntCuot" />
+          <ScalarProperty Name="pagTotAcum" ColumnName="pagTotAcum" />
+          <ScalarProperty Name="DeudTot" ColumnName="DeudTot" />
+          <ScalarProperty Name="vendedor" ColumnName="vendedor" />
+          <ScalarProperty Name="cod_vendedor" ColumnName="cod_vendedor" />
+          <ScalarProperty Name="idetletra" ColumnName="idetletra" />
+          <ScalarProperty Name="diaatr" ColumnName="diaatr" />
+          <ScalarProperty Name="dfecvenc" ColumnName="dfecvenc" />
+          <ScalarProperty Name="dfecEmi" ColumnName="dfecEmi" />
+          <ScalarProperty Name="inumletra" ColumnName="inumletra" />
+          <ScalarProperty Name="ult" ColumnName="ult" />
+          <ScalarProperty Name="icodletra" ColumnName="icodletra" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="proveedor_letra">
+      <EntityTypeMapping TypeName="AgrocomercioModel.proveedor_letra">
+        <MappingFragment StoreEntitySet="proveedor_letra">
+          <ScalarProperty Name="salsol" ColumnName="salsol" />
+          <ScalarProperty Name="MNTLTSOL" ColumnName="MNTLTSOL" />
+          <ScalarProperty Name="SalDol" ColumnName="SalDol" />
+          <ScalarProperty Name="mntletDol" ColumnName="mntletDol" />
+          <ScalarProperty Name="IESTADO" ColumnName="IESTADO" />
+          <ScalarProperty Name="ITOTCUOTA" ColumnName="ITOTCUOTA" />
+          <ScalarProperty Name="CMONEDA" ColumnName="CMONEDA" />
+          <ScalarProperty Name="PrvCod" ColumnName="PrvCod" />
+          <ScalarProperty Name="opetotpagar" ColumnName="opetotpagar" />
+          <ScalarProperty Name="PrvRazon" ColumnName="PrvRazon" />
+          <ScalarProperty Name="numfac" ColumnName="numfac" />
+          <ScalarProperty Name="dopCod" ColumnName="dopCod" />
+          <ScalarProperty Name="dfecemision" ColumnName="dfecemision" />
+          <ScalarProperty Name="valor" ColumnName="valor" />
+          <ScalarProperty Name="icodletra" ColumnName="icodletra" />
+          <ScalarProperty Name="tipo" ColumnName="tipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rel_not_fact">
+      <EntityTypeMapping TypeName="AgrocomercioModel.rel_not_fact">
+        <MappingFragment StoreEntitySet="rel_not_fact">
+          <ScalarProperty Name="icodletra" ColumnName="icodletra" />
+          <ScalarProperty Name="irelnotfac" ColumnName="irelnotfac" />
+          <ScalarProperty Name="iusrcrc" ColumnName="iusrcrc" />
+          <ScalarProperty Name="dfecmod" ColumnName="dfecmod" />
+          <ScalarProperty Name="nmonto" ColumnName="nmonto" />
+          <ScalarProperty Name="dfecreg" ColumnName="dfecreg" />
+          <ScalarProperty Name="ccodnota" ColumnName="ccodnota" />
+          <ScalarProperty Name="inota" ColumnName="inota" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RepNotDet">
+      <EntityTypeMapping TypeName="AgrocomercioModel.RepNotDet">
+        <MappingFragment StoreEntitySet="RepNotDet">
+          <ScalarProperty Name="moneda" ColumnName="moneda" />
+          <ScalarProperty Name="nmntsolutl" ColumnName="nmntsolutl" />
+          <ScalarProperty Name="nmntdolutl" ColumnName="nmntdolutl" />
+          <ScalarProperty Name="nmntsoles" ColumnName="nmntsoles" />
+          <ScalarProperty Name="nmntdolares" ColumnName="nmntdolares" />
+          <ScalarProperty Name="factura" ColumnName="factura" />
+          <ScalarProperty Name="COD_LETRA" ColumnName="COD_LETRA" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="cestadoNota" ColumnName="cestadoNota" />
+          <ScalarProperty Name="PrvRazon" ColumnName="PrvRazon" />
+          <ScalarProperty Name="iprvcod" ColumnName="iprvcod" />
+          <ScalarProperty Name="FecEmesion" ColumnName="FecEmesion" />
+          <ScalarProperty Name="ccodnota" ColumnName="ccodnota" />
+          <ScalarProperty Name="inota" ColumnName="inota" />
+          <ScalarProperty Name="TIPO" ColumnName="TIPO" />
+          <ScalarProperty Name="valor" ColumnName="valor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RepNotGen">
+      <EntityTypeMapping TypeName="AgrocomercioModel.RepNotGen">
+        <MappingFragment StoreEntitySet="RepNotGen">
+          <ScalarProperty Name="moneda" ColumnName="moneda" />
+          <ScalarProperty Name="nmntsoles" ColumnName="nmntsoles" />
+          <ScalarProperty Name="nmntdolares" ColumnName="nmntdolares" />
+          <ScalarProperty Name="TOTFACT" ColumnName="TOTFACT" />
+          <ScalarProperty Name="COD_LETRA" ColumnName="COD_LETRA" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="cestadoNota" ColumnName="cestadoNota" />
+          <ScalarProperty Name="PrvRazon" ColumnName="PrvRazon" />
+          <ScalarProperty Name="iprvcod" ColumnName="iprvcod" />
+          <ScalarProperty Name="FecEmesion" ColumnName="FecEmesion" />
+          <ScalarProperty Name="ccodnota" ColumnName="ccodnota" />
+          <ScalarProperty Name="inota" ColumnName="inota" />
+          <ScalarProperty Name="TIPO" ColumnName="TIPO" />
+          <ScalarProperty Name="valor" ColumnName="valor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwList_let_detalle">
+      <EntityTypeMapping TypeName="AgrocomercioModel.vwList_let_detalle">
+        <MappingFragment StoreEntitySet="vwList_let_detalle">
+          <ScalarProperty Name="TraNombre" ColumnName="TraNombre" />
+          <ScalarProperty Name="PerCod" ColumnName="PerCod" />
+          <ScalarProperty Name="ctippago" ColumnName="ctippago" />
+          <ScalarProperty Name="icodletra" ColumnName="icodletra" />
+          <ScalarProperty Name="fec_nxtpg" ColumnName="fec_nxtpg" />
+          <ScalarProperty Name="dfecultpago" ColumnName="dfecultpago" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="nintpag" ColumnName="nintpag" />
+          <ScalarProperty Name="cmoneda" ColumnName="cmoneda" />
+          <ScalarProperty Name="pagpendiente" ColumnName="pagpendiente" />
+          <ScalarProperty Name="nmontocuota" ColumnName="nmontocuota" />
+          <ScalarProperty Name="itotcuota" ColumnName="itotcuota" />
+          <ScalarProperty Name="FecEmesion" ColumnName="FecEmesion" />
+          <ScalarProperty Name="PrvRazon" ColumnName="PrvRazon" />
+          <ScalarProperty Name="codPer" ColumnName="codPer" />
+          <ScalarProperty Name="fac_acum" ColumnName="fac_acum" />
+          <ScalarProperty Name="numDoc" ColumnName="numDoc" />
+          <ScalarProperty Name="valor" ColumnName="valor" />
+          <ScalarProperty Name="saldo" ColumnName="saldo" />
+          <ScalarProperty Name="OpeTotPagar" ColumnName="OpeTotPagar" />
+          <ScalarProperty Name="dopFecEmision" ColumnName="dopFecEmision" />
+          <ScalarProperty Name="numfac" ColumnName="numfac" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

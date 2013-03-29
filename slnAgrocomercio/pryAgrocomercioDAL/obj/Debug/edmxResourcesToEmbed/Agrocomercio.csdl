@@ -1,0 +1,811 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AgrocomercioModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="AgrocomercioEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Articulos" EntityType="AgrocomercioModel.Articulos" />
+    <EntitySet Name="Atributos" EntityType="AgrocomercioModel.Atributos" />
+    <EntitySet Name="Clientes" EntityType="AgrocomercioModel.Clientes" />
+    <EntitySet Name="det_letra" EntityType="AgrocomercioModel.det_letra" />
+    <EntitySet Name="DetOperacion" EntityType="AgrocomercioModel.DetOperacion" />
+    <EntitySet Name="DocumenOperacion" EntityType="AgrocomercioModel.DocumenOperacion" />
+    <EntitySet Name="letra" EntityType="AgrocomercioModel.letra" />
+    <EntitySet Name="ListaPrecios" EntityType="AgrocomercioModel.ListaPrecios" />
+    <EntitySet Name="LotesArt" EntityType="AgrocomercioModel.LotesArt" />
+    <EntitySet Name="Notas" EntityType="AgrocomercioModel.Notas" />
+    <EntitySet Name="Operaciones" EntityType="AgrocomercioModel.Operaciones" />
+    <EntitySet Name="Pag_letras" EntityType="AgrocomercioModel.Pag_letras" />
+    <EntitySet Name="Personal" EntityType="AgrocomercioModel.Personal" />
+    <EntitySet Name="Proveedores" EntityType="AgrocomercioModel.Proveedores" />
+    <EntitySet Name="rel_notfactura" EntityType="AgrocomercioModel.rel_notfactura" />
+    <EntitySet Name="Roles" EntityType="AgrocomercioModel.Roles" />
+    <EntitySet Name="TipoPersonal" EntityType="AgrocomercioModel.TipoPersonal" />
+    <EntitySet Name="Transportistas" EntityType="AgrocomercioModel.Transportistas" />
+    <EntitySet Name="Ubigeos" EntityType="AgrocomercioModel.Ubigeos" />
+    <EntitySet Name="Unidades" EntityType="AgrocomercioModel.Unidades" />
+    <EntitySet Name="Usuarios" EntityType="AgrocomercioModel.Usuarios" />
+    <EntitySet Name="cab_letra" EntityType="AgrocomercioModel.cab_letra" />
+    <EntitySet Name="fac_pnd_let" EntityType="AgrocomercioModel.fac_pnd_let" />
+    <EntitySet Name="fac_x_letra" EntityType="AgrocomercioModel.fac_x_letra" />
+    <EntitySet Name="list_detLetra" EntityType="AgrocomercioModel.list_detLetra" />
+    <EntitySet Name="list_letra" EntityType="AgrocomercioModel.list_letra" />
+    <EntitySet Name="nota_list" EntityType="AgrocomercioModel.nota_list" />
+    <EntitySet Name="Pag_pendientes" EntityType="AgrocomercioModel.Pag_pendientes" />
+    <EntitySet Name="pag_pendnow" EntityType="AgrocomercioModel.pag_pendnow" />
+    <EntitySet Name="rel_not_fact" EntityType="AgrocomercioModel.rel_not_fact" />
+    <AssociationSet Name="FK_Articulos_Proveedores" Association="AgrocomercioModel.FK_Articulos_Proveedores">
+      <End Role="Proveedores" EntitySet="Proveedores" />
+      <End Role="Articulos" EntitySet="Articulos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ARTICULOS_UNIDADES" Association="AgrocomercioModel.FK_ARTICULOS_UNIDADES">
+      <End Role="Unidades" EntitySet="Unidades" />
+      <End Role="Articulos" EntitySet="Articulos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DetOperacion_Articulos" Association="AgrocomercioModel.FK_DetOperacion_Articulos">
+      <End Role="Articulos" EntitySet="Articulos" />
+      <End Role="DetOperacion" EntitySet="DetOperacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LISTAPRECIOS_ARTICULOS" Association="AgrocomercioModel.FK_LISTAPRECIOS_ARTICULOS">
+      <End Role="Articulos" EntitySet="Articulos" />
+      <End Role="ListaPrecios" EntitySet="ListaPrecios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Operaciones_Clientes" Association="AgrocomercioModel.FK_Operaciones_Clientes">
+      <End Role="Clientes" EntitySet="Clientes" />
+      <End Role="Operaciones" EntitySet="Operaciones" />
+    </AssociationSet>
+    <AssociationSet Name="det_letra_fk" Association="AgrocomercioModel.det_letra_fk">
+      <End Role="letra" EntitySet="letra" />
+      <End Role="det_letra" EntitySet="det_letra" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DetOperacion_LotesArt" Association="AgrocomercioModel.FK_DetOperacion_LotesArt">
+      <End Role="LotesArt" EntitySet="LotesArt" />
+      <End Role="DetOperacion" EntitySet="DetOperacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DetOperacion_Operaciones" Association="AgrocomercioModel.FK_DetOperacion_Operaciones">
+      <End Role="Operaciones" EntitySet="Operaciones" />
+      <End Role="DetOperacion" EntitySet="DetOperacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DetOperacion_Unidades" Association="AgrocomercioModel.FK_DetOperacion_Unidades">
+      <End Role="Unidades" EntitySet="Unidades" />
+      <End Role="DetOperacion" EntitySet="DetOperacion" />
+    </AssociationSet>
+    <AssociationSet Name="rel_notfactura_fk" Association="AgrocomercioModel.rel_notfactura_fk">
+      <End Role="DetOperacion" EntitySet="DetOperacion" />
+      <End Role="rel_notfactura" EntitySet="rel_notfactura" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DocumenOperacion_Operaciones" Association="AgrocomercioModel.FK_DocumenOperacion_Operaciones">
+      <End Role="Operaciones" EntitySet="Operaciones" />
+      <End Role="DocumenOperacion" EntitySet="DocumenOperacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LotesArt_ListaPrecios" Association="AgrocomercioModel.FK_LotesArt_ListaPrecios">
+      <End Role="ListaPrecios" EntitySet="ListaPrecios" />
+      <End Role="LotesArt" EntitySet="LotesArt" />
+    </AssociationSet>
+    <AssociationSet Name="rel_notfactura_fk2" Association="AgrocomercioModel.rel_notfactura_fk2">
+      <End Role="Notas" EntitySet="Notas" />
+      <End Role="rel_notfactura" EntitySet="rel_notfactura" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Operaciones_Personal" Association="AgrocomercioModel.FK_Operaciones_Personal">
+      <End Role="Personal" EntitySet="Personal" />
+      <End Role="Operaciones" EntitySet="Operaciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Operaciones_Proveedores" Association="AgrocomercioModel.FK_Operaciones_Proveedores">
+      <End Role="Proveedores" EntitySet="Proveedores" />
+      <End Role="Operaciones" EntitySet="Operaciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Operaciones_Transportistas" Association="AgrocomercioModel.FK_Operaciones_Transportistas">
+      <End Role="Transportistas" EntitySet="Transportistas" />
+      <End Role="Operaciones" EntitySet="Operaciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Personal_TipoPersonal" Association="AgrocomercioModel.FK_Personal_TipoPersonal">
+      <End Role="TipoPersonal" EntitySet="TipoPersonal" />
+      <End Role="Personal" EntitySet="Personal" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuarios_Personal" Association="AgrocomercioModel.FK_Usuarios_Personal">
+      <End Role="Personal" EntitySet="Personal" />
+      <End Role="Usuarios" EntitySet="Usuarios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuarios_Roles" Association="AgrocomercioModel.FK_Usuarios_Roles">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="Usuarios" EntitySet="Usuarios" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Articulos">
+    <Key>
+      <PropertyRef Name="ArtCod" />
+    </Key>
+    <Property Type="Int32" Name="ArtCod" Nullable="false" />
+    <Property Type="Int32" Name="PrvCod" />
+    <Property Type="String" Name="CodAnt" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ArtDescripcion" Nullable="false" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="ArtStock" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="ArtStockFac" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="ArtCostoProm" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="ArtStockMax" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="ArtStockMin" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="ArtPeso" Precision="18" Scale="2" />
+    <Property Type="Int32" Name="UniCod" />
+    <Property Type="DateTime" Name="ArtFecRegis" />
+    <Property Type="DateTime" Name="ArtFecModi" />
+    <Property Type="Boolean" Name="Artestado" Nullable="false" />
+    <Property Type="DateTime" Name="ArtFecVen" />
+    <NavigationProperty Name="Proveedores" Relationship="AgrocomercioModel.FK_Articulos_Proveedores" FromRole="Articulos" ToRole="Proveedores" />
+    <NavigationProperty Name="Unidades" Relationship="AgrocomercioModel.FK_ARTICULOS_UNIDADES" FromRole="Articulos" ToRole="Unidades" />
+    <NavigationProperty Name="DetOperacion" Relationship="AgrocomercioModel.FK_DetOperacion_Articulos" FromRole="Articulos" ToRole="DetOperacion" />
+    <NavigationProperty Name="ListaPrecios" Relationship="AgrocomercioModel.FK_LISTAPRECIOS_ARTICULOS" FromRole="Articulos" ToRole="ListaPrecios" />
+  </EntityType>
+  <EntityType Name="Atributos">
+    <Key>
+      <PropertyRef Name="AtrTipoCod" />
+      <PropertyRef Name="AtrCodigo" />
+    </Key>
+    <Property Type="Int32" Name="AtrTipoCod" Nullable="false" />
+    <Property Type="Int32" Name="AtrNivel" />
+    <Property Type="String" Name="AtrCodigo" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="AtrDescripcion" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="AtrEstado" />
+  </EntityType>
+  <EntityType Name="Clientes">
+    <Key>
+      <PropertyRef Name="CliCod" />
+    </Key>
+    <Property Type="Int32" Name="CliCod" Nullable="false" />
+    <Property Type="String" Name="CodAnt" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CliTipoPer" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="CliTipoDoc" MaxLength="3" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="CliNumDoc" MaxLength="12" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CliNombre" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CliDireccion" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CliTelefono" MaxLength="18" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CliRepresen" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="CliFecRegis" />
+    <Property Type="Boolean" Name="CliEstado" Nullable="false" />
+    <NavigationProperty Name="Operaciones" Relationship="AgrocomercioModel.FK_Operaciones_Clientes" FromRole="Clientes" ToRole="Operaciones" />
+  </EntityType>
+  <EntityType Name="det_letra">
+    <Key>
+      <PropertyRef Name="idetletra" />
+    </Key>
+    <Property Type="Int32" Name="icodletra" Nullable="false" />
+    <Property Type="Int32" Name="inumletra" Nullable="false" />
+    <Property Type="String" Name="ccodletra" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="nmonto" Precision="10" Scale="2" />
+    <Property Type="String" Name="cestado" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="ninteres" Precision="10" Scale="2" />
+    <Property Type="DateTime" Name="dfecvenc" />
+    <Property Type="DateTime" Name="dfecpago" />
+    <Property Type="DateTime" Name="dfecmod" />
+    <Property Type="Int32" Name="idetletra" Nullable="false" />
+    <Property Type="String" Name="cnumletra" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="letra" Relationship="AgrocomercioModel.det_letra_fk" FromRole="det_letra" ToRole="letra" />
+  </EntityType>
+  <EntityType Name="DetOperacion">
+    <Key>
+      <PropertyRef Name="dtpCod" />
+    </Key>
+    <Property Type="Int64" Name="dtpCod" Nullable="false" />
+    <Property Type="Int64" Name="OpeCod" Nullable="false" />
+    <Property Type="Int32" Name="ArtCod" />
+    <Property Type="Int32" Name="LotCod" />
+    <Property Type="Decimal" Name="dtpCantidad" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="dtpPrecioVen" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="dtpDscto" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="dtpSubTotal" Precision="18" Scale="2" />
+    <Property Type="Int32" Name="UniCod" />
+    <Property Type="Boolean" Name="dtpEstado" />
+    <NavigationProperty Name="Articulos" Relationship="AgrocomercioModel.FK_DetOperacion_Articulos" FromRole="DetOperacion" ToRole="Articulos" />
+    <NavigationProperty Name="LotesArt" Relationship="AgrocomercioModel.FK_DetOperacion_LotesArt" FromRole="DetOperacion" ToRole="LotesArt" />
+    <NavigationProperty Name="Operaciones" Relationship="AgrocomercioModel.FK_DetOperacion_Operaciones" FromRole="DetOperacion" ToRole="Operaciones" />
+    <NavigationProperty Name="Unidades" Relationship="AgrocomercioModel.FK_DetOperacion_Unidades" FromRole="DetOperacion" ToRole="Unidades" />
+    <NavigationProperty Name="rel_notfactura" Relationship="AgrocomercioModel.rel_notfactura_fk" FromRole="DetOperacion" ToRole="rel_notfactura" />
+  </EntityType>
+  <EntityType Name="DocumenOperacion">
+    <Key>
+      <PropertyRef Name="dopCod" />
+    </Key>
+    <Property Type="Int64" Name="dopCod" Nullable="false" />
+    <Property Type="String" Name="dopNroSerie" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="dopNumero" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="OpeCod" Nullable="false" />
+    <Property Type="Int32" Name="tdoCod" Nullable="false" />
+    <Property Type="String" Name="dopMoneda" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="DateTime" Name="dopFecEmision" />
+    <Property Type="DateTime" Name="dopFecCancela" />
+    <Property Type="Int32" Name="dopNroImpre" />
+    <Property Type="DateTime" Name="dopFecUltImpre" />
+    <Property Type="String" Name="dopEstado" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="Int32" Name="icodletra" />
+    <NavigationProperty Name="Operaciones" Relationship="AgrocomercioModel.FK_DocumenOperacion_Operaciones" FromRole="DocumenOperacion" ToRole="Operaciones" />
+  </EntityType>
+  <EntityType Name="letra">
+    <Key>
+      <PropertyRef Name="icodigo" />
+    </Key>
+    <Property Type="Int32" Name="icodigo" Nullable="false" />
+    <Property Type="Int32" Name="itotcuota" />
+    <Property Type="Decimal" Name="nmontocuota" Precision="10" Scale="2" />
+    <Property Type="String" Name="cmoneda" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="nintpag" Precision="10" Scale="2" />
+    <Property Type="String" Name="iestado" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="dfeccreacion" />
+    <Property Type="DateTime" Name="dfecultpago" />
+    <Property Type="DateTime" Name="dfecmod" />
+    <Property Type="Int32" Name="iusrCreacion" />
+    <Property Type="String" Name="ctippago" MaxLength="1" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="det_letra" Relationship="AgrocomercioModel.det_letra_fk" FromRole="letra" ToRole="det_letra" />
+  </EntityType>
+  <EntityType Name="ListaPrecios">
+    <Key>
+      <PropertyRef Name="LprCod" />
+    </Key>
+    <Property Type="Int32" Name="LprCod" Nullable="false" />
+    <Property Type="Int32" Name="ArtCod" Nullable="false" />
+    <Property Type="DateTime" Name="LprFecRegis" />
+    <Property Type="Decimal" Name="LprPrecio" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="LprDscto" Precision="18" Scale="2" />
+    <Property Type="Boolean" Name="LprEstado" Nullable="false" />
+    <NavigationProperty Name="Articulos" Relationship="AgrocomercioModel.FK_LISTAPRECIOS_ARTICULOS" FromRole="ListaPrecios" ToRole="Articulos" />
+    <NavigationProperty Name="LotesArt" Relationship="AgrocomercioModel.FK_LotesArt_ListaPrecios" FromRole="ListaPrecios" ToRole="LotesArt" />
+  </EntityType>
+  <EntityType Name="LotesArt">
+    <Key>
+      <PropertyRef Name="LotCod" />
+    </Key>
+    <Property Type="Int32" Name="LotCod" Nullable="false" />
+    <Property Type="Int32" Name="LotNro" Nullable="false" />
+    <Property Type="Int32" Name="LprCod" Nullable="false" />
+    <Property Type="Decimal" Name="LotStock" Precision="18" Scale="2" />
+    <Property Type="DateTime" Name="LotFecRegis" />
+    <Property Type="DateTime" Name="LotFecVenci" />
+    <Property Type="DateTime" Name="LotFecModi" />
+    <Property Type="Boolean" Name="LotEstado" Nullable="false" />
+    <NavigationProperty Name="DetOperacion" Relationship="AgrocomercioModel.FK_DetOperacion_LotesArt" FromRole="LotesArt" ToRole="DetOperacion" />
+    <NavigationProperty Name="ListaPrecios" Relationship="AgrocomercioModel.FK_LotesArt_ListaPrecios" FromRole="LotesArt" ToRole="ListaPrecios" />
+  </EntityType>
+  <EntityType Name="Notas">
+    <Key>
+      <PropertyRef Name="inota" />
+    </Key>
+    <Property Type="String" Name="ccodnota" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Type="DateTime" Name="dfecreg" />
+    <Property Type="Int32" Name="iprvcod" />
+    <Property Type="Decimal" Name="nmontoNota" Precision="10" Scale="2" />
+    <Property Type="String" Name="cestadoNota" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="nmntutilizado" Precision="10" Scale="2" />
+    <Property Type="Int32" Name="inota" Nullable="false" />
+    <Property Type="String" Name="cobservaciones" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ctipo" MaxLength="1" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="rel_notfactura" Relationship="AgrocomercioModel.rel_notfactura_fk2" FromRole="Notas" ToRole="rel_notfactura" />
+  </EntityType>
+  <EntityType Name="Operaciones">
+    <Key>
+      <PropertyRef Name="OpeCod" />
+    </Key>
+    <Property Type="Int64" Name="OpeCod" Nullable="false" />
+    <Property Type="String" Name="OpeTipo" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="DateTime" Name="OpeFecEmision" />
+    <Property Type="DateTime" Name="OpeFecCancela" />
+    <Property Type="Int32" Name="ZonCod" />
+    <Property Type="Int32" Name="PerCod" />
+    <Property Type="Int32" Name="TraCod" />
+    <Property Type="Int32" Name="CliCod" />
+    <Property Type="Int32" Name="PrvCod" />
+    <Property Type="String" Name="OpeMoneda" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="OpeTipPago" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="OpeSubTotal" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="OpeDscto" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="OpeFlete" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="OpeImpuesto" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="OpeTotal" Precision="18" Scale="2" />
+    <Property Type="String" Name="OpeEstado" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="DateTime" Name="OpeModifica" />
+    <Property Type="Int32" Name="UsrCod" />
+    <Property Type="Decimal" Name="OpeTotPagPen" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="OpeTotPagar" Precision="18" Scale="2" />
+    <NavigationProperty Name="Clientes" Relationship="AgrocomercioModel.FK_Operaciones_Clientes" FromRole="Operaciones" ToRole="Clientes" />
+    <NavigationProperty Name="DetOperacion" Relationship="AgrocomercioModel.FK_DetOperacion_Operaciones" FromRole="Operaciones" ToRole="DetOperacion" />
+    <NavigationProperty Name="DocumenOperacion" Relationship="AgrocomercioModel.FK_DocumenOperacion_Operaciones" FromRole="Operaciones" ToRole="DocumenOperacion" />
+    <NavigationProperty Name="Personal" Relationship="AgrocomercioModel.FK_Operaciones_Personal" FromRole="Operaciones" ToRole="Personal" />
+    <NavigationProperty Name="Proveedores" Relationship="AgrocomercioModel.FK_Operaciones_Proveedores" FromRole="Operaciones" ToRole="Proveedores" />
+    <NavigationProperty Name="Transportistas" Relationship="AgrocomercioModel.FK_Operaciones_Transportistas" FromRole="Operaciones" ToRole="Transportistas" />
+  </EntityType>
+  <EntityType Name="Pag_letras">
+    <Key>
+      <PropertyRef Name="idpagletra" />
+    </Key>
+    <Property Type="Int32" Name="idpagletra" Nullable="false" />
+    <Property Type="Int32" Name="idetletra" />
+    <Property Type="Decimal" Name="nmonto" Precision="8" Scale="2" />
+    <Property Type="DateTime" Name="dfecpago" />
+    <Property Type="DateTime" Name="dfecmodifi" />
+    <Property Type="Int32" Name="ipercod" />
+    <Property Type="Int32" Name="icodpago" />
+  </EntityType>
+  <EntityType Name="Personal">
+    <Key>
+      <PropertyRef Name="perCod" />
+    </Key>
+    <Property Type="Int32" Name="perCod" Nullable="false" />
+    <Property Type="Int32" Name="tpecod" Nullable="false" />
+    <Property Type="String" Name="perNombres" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="perApellidoPat" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="perApellidoMat" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="perDireccion" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="perTelefono" MaxLength="15" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Operaciones" Relationship="AgrocomercioModel.FK_Operaciones_Personal" FromRole="Personal" ToRole="Operaciones" />
+    <NavigationProperty Name="TipoPersonal" Relationship="AgrocomercioModel.FK_Personal_TipoPersonal" FromRole="Personal" ToRole="TipoPersonal" />
+    <NavigationProperty Name="Usuarios" Relationship="AgrocomercioModel.FK_Usuarios_Personal" FromRole="Personal" ToRole="Usuarios" />
+  </EntityType>
+  <EntityType Name="Proveedores">
+    <Key>
+      <PropertyRef Name="PrvCod" />
+    </Key>
+    <Property Type="Int32" Name="PrvCod" Nullable="false" />
+    <Property Type="String" Name="CodAnt" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PrvNumDoc" MaxLength="12" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="PrvRazon" Nullable="false" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PrvDireccion" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PrvTelefono" MaxLength="18" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PrvContacto" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="PrvFecRegis" Nullable="false" />
+    <Property Type="Boolean" Name="PrvEstado" Nullable="false" />
+    <NavigationProperty Name="Articulos" Relationship="AgrocomercioModel.FK_Articulos_Proveedores" FromRole="Proveedores" ToRole="Articulos" />
+    <NavigationProperty Name="Operaciones" Relationship="AgrocomercioModel.FK_Operaciones_Proveedores" FromRole="Proveedores" ToRole="Operaciones" />
+  </EntityType>
+  <EntityType Name="rel_notfactura">
+    <Key>
+      <PropertyRef Name="irelnotfac" />
+    </Key>
+    <Property Type="Int64" Name="idtpcod" />
+    <Property Type="Int32" Name="inota" />
+    <Property Type="Decimal" Name="nmonto" Precision="10" Scale="2" />
+    <Property Type="DateTime" Name="dfecmod" />
+    <Property Type="Int32" Name="iusrcrc" />
+    <Property Type="Int32" Name="irelnotfac" Nullable="false" />
+    <NavigationProperty Name="DetOperacion" Relationship="AgrocomercioModel.rel_notfactura_fk" FromRole="rel_notfactura" ToRole="DetOperacion" />
+    <NavigationProperty Name="Notas" Relationship="AgrocomercioModel.rel_notfactura_fk2" FromRole="rel_notfactura" ToRole="Notas" />
+  </EntityType>
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="rolCod" />
+    </Key>
+    <Property Type="Int32" Name="rolCod" Nullable="false" />
+    <Property Type="String" Name="rolDescripcion" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Usuarios" Relationship="AgrocomercioModel.FK_Usuarios_Roles" FromRole="Roles" ToRole="Usuarios" />
+  </EntityType>
+  <EntityType Name="TipoPersonal">
+    <Key>
+      <PropertyRef Name="tpeCod" />
+    </Key>
+    <Property Type="Int32" Name="tpeCod" Nullable="false" />
+    <Property Type="String" Name="tpeDescripcion" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Personal" Relationship="AgrocomercioModel.FK_Personal_TipoPersonal" FromRole="TipoPersonal" ToRole="Personal" />
+  </EntityType>
+  <EntityType Name="Transportistas">
+    <Key>
+      <PropertyRef Name="TraCod" />
+    </Key>
+    <Property Type="Int32" Name="TraCod" Nullable="false" />
+    <Property Type="String" Name="TraRuc" Nullable="false" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TraRazonSocial" Nullable="false" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TraDireccion" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TraTelefono" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="TraFecRegis" />
+    <Property Type="Boolean" Name="TraEstado" />
+    <NavigationProperty Name="Operaciones" Relationship="AgrocomercioModel.FK_Operaciones_Transportistas" FromRole="Transportistas" ToRole="Operaciones" />
+  </EntityType>
+  <EntityType Name="Ubigeos">
+    <Key>
+      <PropertyRef Name="UbiCod" />
+    </Key>
+    <Property Type="String" Name="UbiCod" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="UbiDescripcion" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Unidades">
+    <Key>
+      <PropertyRef Name="UniCod" />
+    </Key>
+    <Property Type="Int32" Name="UniCod" Nullable="false" />
+    <Property Type="String" Name="UniDescripcion" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="UniAbrev" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="UniFactor" Precision="18" Scale="4" />
+    <Property Type="Int32" Name="UniSuperior" Nullable="false" />
+    <Property Type="Boolean" Name="UniEstado" />
+    <Property Type="DateTime" Name="UniFecRegis" Nullable="false" />
+    <NavigationProperty Name="Articulos" Relationship="AgrocomercioModel.FK_ARTICULOS_UNIDADES" FromRole="Unidades" ToRole="Articulos" />
+    <NavigationProperty Name="DetOperacion" Relationship="AgrocomercioModel.FK_DetOperacion_Unidades" FromRole="Unidades" ToRole="DetOperacion" />
+  </EntityType>
+  <EntityType Name="Usuarios">
+    <Key>
+      <PropertyRef Name="usrCod" />
+    </Key>
+    <Property Type="Int32" Name="usrCod" Nullable="false" />
+    <Property Type="Int32" Name="perCod" />
+    <Property Type="String" Name="usrLogin" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="usrClave" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="RolCod" />
+    <NavigationProperty Name="Personal" Relationship="AgrocomercioModel.FK_Usuarios_Personal" FromRole="Usuarios" ToRole="Personal" />
+    <NavigationProperty Name="Roles" Relationship="AgrocomercioModel.FK_Usuarios_Roles" FromRole="Usuarios" ToRole="Roles" />
+  </EntityType>
+  <EntityType Name="cab_letra">
+    <Key>
+      <PropertyRef Name="icodigo" />
+    </Key>
+    <Property Type="String" Name="valor" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="Int32" Name="icodigo" Nullable="false" />
+    <Property Type="String" Name="numDoc" MaxLength="14" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PrvRazon" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FecEmesion" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="itotcuota" />
+    <Property Type="Decimal" Name="nmontocuota" Precision="10" Scale="2" />
+    <Property Type="Decimal" Name="opetotPagpen" Precision="18" Scale="2" />
+    <Property Type="String" Name="cmoneda" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="nintpag" Precision="10" Scale="2" />
+    <Property Type="String" Name="estado" MaxLength="7" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="dfecultpago" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="fec_nxtpg" />
+    <Property Type="String" Name="ctippago" MaxLength="1" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="fac_pnd_let">
+    <Key>
+      <PropertyRef Name="dopCod" />
+    </Key>
+    <Property Type="String" Name="valor" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="dfecemision" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="Int64" Name="dopCod" Nullable="false" />
+    <Property Type="String" Name="numfac" MaxLength="54" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PrvRazon" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="opetotpagar" Precision="18" Scale="2" />
+    <Property Type="Int32" Name="PrvCod" />
+  </EntityType>
+  <EntityType Name="fac_x_letra">
+    <Key>
+      <PropertyRef Name="dopCod" />
+    </Key>
+    <Property Type="Int32" Name="icodletra" />
+    <Property Type="String" Name="valor" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="dfecemision" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="Int64" Name="dopCod" Nullable="false" />
+    <Property Type="String" Name="numfac" MaxLength="54" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PrvRazon" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="opetotpagar" Precision="18" Scale="2" />
+    <Property Type="Int32" Name="PrvCod" />
+  </EntityType>
+  <EntityType Name="list_detLetra">
+    <Key>
+      <PropertyRef Name="PrvRazon" />
+      <PropertyRef Name="estado" />
+      <PropertyRef Name="icodletra" />
+      <PropertyRef Name="idetletra" />
+    </Key>
+    <Property Type="String" Name="valor" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="dfecven" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="cuota" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ccodletra" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="cnumletra" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PrvRazon" Nullable="false" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="estado" Nullable="false" MaxLength="7" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="dfecpag" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="cmoneda" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="mnt_cuota" Precision="10" Scale="2" />
+    <Property Type="Decimal" Name="mnt_letra" Precision="10" Scale="2" />
+    <Property Type="Decimal" Name="Saldo_total" Precision="38" Scale="2" />
+    <Property Type="Decimal" Name="ninteres" Precision="10" Scale="2" />
+    <Property Type="Int32" Name="PrvCod" />
+    <Property Type="String" Name="cestado" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="icodletra" Nullable="false" />
+    <Property Type="Int32" Name="idetletra" Nullable="false" />
+  </EntityType>
+  <EntityType Name="list_letra">
+    <Key>
+      <PropertyRef Name="PrvRazon" />
+    </Key>
+    <Property Type="String" Name="valor" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="numDoc" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="fac_acum" />
+    <Property Type="String" Name="PrvRazon" Nullable="false" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FecEmesion" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="itotcuota" />
+    <Property Type="Decimal" Name="nmontocuota" Precision="10" Scale="2" />
+    <Property Type="Decimal" Name="pagpendiente" Precision="38" Scale="2" />
+    <Property Type="String" Name="cmoneda" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="nintpag" Precision="10" Scale="2" />
+    <Property Type="String" Name="estado" MaxLength="7" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="dfecultpago" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="fec_nxtpg" MaxLength="30" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="nota_list">
+    <Key>
+      <PropertyRef Name="inota" />
+      <PropertyRef Name="estado" />
+    </Key>
+    <Property Type="String" Name="valor" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="inota" Nullable="false" />
+    <Property Type="String" Name="ccodnota" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="FecEmesion" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="iprvcod" />
+    <Property Type="String" Name="PrvRazon" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="nmontoNota" Precision="10" Scale="2" />
+    <Property Type="String" Name="cestadoNota" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="nmntutilizado" Precision="10" Scale="2" />
+    <Property Type="String" Name="estado" Nullable="false" MaxLength="22" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Pag_pendientes">
+    <Key>
+      <PropertyRef Name="icodletra" />
+      <PropertyRef Name="idetletra" />
+    </Key>
+    <Property Type="Int32" Name="icodletra" Nullable="false" />
+    <Property Type="String" Name="inumletra" MaxLength="24" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="dfecvenc" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="idetletra" Nullable="false" />
+    <Property Type="Int32" Name="cod_vendedor" />
+    <Property Type="String" Name="vendedor" MaxLength="192" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="DeudTot" Precision="38" Scale="2" />
+    <Property Type="Decimal" Name="pagTotAcum" Precision="38" Scale="2" />
+    <Property Type="Decimal" Name="mntCuot" Precision="10" Scale="2" />
+    <Property Type="Decimal" Name="pagoCuot" Precision="38" Scale="2" />
+    <Property Type="Int32" Name="cod_cliente" />
+    <Property Type="String" Name="cliente" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ctippago" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="OpeTipo" MaxLength="1" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="pag_pendnow">
+    <Key>
+      <PropertyRef Name="icodletra" />
+      <PropertyRef Name="idetletra" />
+    </Key>
+    <Property Type="Int32" Name="icodletra" Nullable="false" />
+    <Property Type="String" Name="inumletra" MaxLength="24" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="dfecvenc" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="idetletra" Nullable="false" />
+    <Property Type="Int32" Name="cod_vendedor" />
+    <Property Type="String" Name="vendedor" MaxLength="192" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="DeudTot" Precision="38" Scale="2" />
+    <Property Type="Decimal" Name="pagTotAcum" Precision="38" Scale="2" />
+    <Property Type="Decimal" Name="mntCuot" Precision="10" Scale="2" />
+    <Property Type="Decimal" Name="pagoCuot" Precision="38" Scale="2" />
+    <Property Type="Int32" Name="cod_cliente" />
+    <Property Type="String" Name="cliente" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ctippago" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="OpeTipo" MaxLength="1" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="rel_not_fact">
+    <Key>
+      <PropertyRef Name="irelnotfac" />
+    </Key>
+    <Property Type="Int32" Name="inota" />
+    <Property Type="String" Name="ccodnota" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="dfecreg" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="nmonto" Precision="10" Scale="2" />
+    <Property Type="DateTime" Name="dfecmod" />
+    <Property Type="Int32" Name="iusrcrc" />
+    <Property Type="Int32" Name="irelnotfac" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Articulos_Proveedores">
+    <End Type="AgrocomercioModel.Proveedores" Role="Proveedores" Multiplicity="0..1" />
+    <End Type="AgrocomercioModel.Articulos" Role="Articulos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Proveedores">
+        <PropertyRef Name="PrvCod" />
+      </Principal>
+      <Dependent Role="Articulos">
+        <PropertyRef Name="PrvCod" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ARTICULOS_UNIDADES">
+    <End Type="AgrocomercioModel.Unidades" Role="Unidades" Multiplicity="0..1" />
+    <End Type="AgrocomercioModel.Articulos" Role="Articulos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Unidades">
+        <PropertyRef Name="UniCod" />
+      </Principal>
+      <Dependent Role="Articulos">
+        <PropertyRef Name="UniCod" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DetOperacion_Articulos">
+    <End Type="AgrocomercioModel.Articulos" Role="Articulos" Multiplicity="0..1" />
+    <End Type="AgrocomercioModel.DetOperacion" Role="DetOperacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Articulos">
+        <PropertyRef Name="ArtCod" />
+      </Principal>
+      <Dependent Role="DetOperacion">
+        <PropertyRef Name="ArtCod" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LISTAPRECIOS_ARTICULOS">
+    <End Type="AgrocomercioModel.Articulos" Role="Articulos" Multiplicity="1" />
+    <End Type="AgrocomercioModel.ListaPrecios" Role="ListaPrecios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Articulos">
+        <PropertyRef Name="ArtCod" />
+      </Principal>
+      <Dependent Role="ListaPrecios">
+        <PropertyRef Name="ArtCod" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Operaciones_Clientes">
+    <End Type="AgrocomercioModel.Clientes" Role="Clientes" Multiplicity="0..1" />
+    <End Type="AgrocomercioModel.Operaciones" Role="Operaciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clientes">
+        <PropertyRef Name="CliCod" />
+      </Principal>
+      <Dependent Role="Operaciones">
+        <PropertyRef Name="CliCod" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="det_letra_fk">
+    <End Type="AgrocomercioModel.letra" Role="letra" Multiplicity="1" />
+    <End Type="AgrocomercioModel.det_letra" Role="det_letra" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="letra">
+        <PropertyRef Name="icodigo" />
+      </Principal>
+      <Dependent Role="det_letra">
+        <PropertyRef Name="icodletra" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DetOperacion_LotesArt">
+    <End Type="AgrocomercioModel.LotesArt" Role="LotesArt" Multiplicity="0..1" />
+    <End Type="AgrocomercioModel.DetOperacion" Role="DetOperacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LotesArt">
+        <PropertyRef Name="LotCod" />
+      </Principal>
+      <Dependent Role="DetOperacion">
+        <PropertyRef Name="LotCod" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DetOperacion_Operaciones">
+    <End Type="AgrocomercioModel.Operaciones" Role="Operaciones" Multiplicity="1" />
+    <End Type="AgrocomercioModel.DetOperacion" Role="DetOperacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Operaciones">
+        <PropertyRef Name="OpeCod" />
+      </Principal>
+      <Dependent Role="DetOperacion">
+        <PropertyRef Name="OpeCod" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DetOperacion_Unidades">
+    <End Type="AgrocomercioModel.Unidades" Role="Unidades" Multiplicity="0..1" />
+    <End Type="AgrocomercioModel.DetOperacion" Role="DetOperacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Unidades">
+        <PropertyRef Name="UniCod" />
+      </Principal>
+      <Dependent Role="DetOperacion">
+        <PropertyRef Name="UniCod" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="rel_notfactura_fk">
+    <End Type="AgrocomercioModel.DetOperacion" Role="DetOperacion" Multiplicity="0..1" />
+    <End Type="AgrocomercioModel.rel_notfactura" Role="rel_notfactura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DetOperacion">
+        <PropertyRef Name="dtpCod" />
+      </Principal>
+      <Dependent Role="rel_notfactura">
+        <PropertyRef Name="idtpcod" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DocumenOperacion_Operaciones">
+    <End Type="AgrocomercioModel.Operaciones" Role="Operaciones" Multiplicity="1" />
+    <End Type="AgrocomercioModel.DocumenOperacion" Role="DocumenOperacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Operaciones">
+        <PropertyRef Name="OpeCod" />
+      </Principal>
+      <Dependent Role="DocumenOperacion">
+        <PropertyRef Name="OpeCod" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LotesArt_ListaPrecios">
+    <End Type="AgrocomercioModel.ListaPrecios" Role="ListaPrecios" Multiplicity="1" />
+    <End Type="AgrocomercioModel.LotesArt" Role="LotesArt" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListaPrecios">
+        <PropertyRef Name="LprCod" />
+      </Principal>
+      <Dependent Role="LotesArt">
+        <PropertyRef Name="LprCod" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="rel_notfactura_fk2">
+    <End Type="AgrocomercioModel.Notas" Role="Notas" Multiplicity="0..1" />
+    <End Type="AgrocomercioModel.rel_notfactura" Role="rel_notfactura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Notas">
+        <PropertyRef Name="inota" />
+      </Principal>
+      <Dependent Role="rel_notfactura">
+        <PropertyRef Name="inota" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Operaciones_Personal">
+    <End Type="AgrocomercioModel.Personal" Role="Personal" Multiplicity="0..1" />
+    <End Type="AgrocomercioModel.Operaciones" Role="Operaciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Personal">
+        <PropertyRef Name="perCod" />
+      </Principal>
+      <Dependent Role="Operaciones">
+        <PropertyRef Name="PerCod" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Operaciones_Proveedores">
+    <End Type="AgrocomercioModel.Proveedores" Role="Proveedores" Multiplicity="0..1" />
+    <End Type="AgrocomercioModel.Operaciones" Role="Operaciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Proveedores">
+        <PropertyRef Name="PrvCod" />
+      </Principal>
+      <Dependent Role="Operaciones">
+        <PropertyRef Name="PrvCod" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Operaciones_Transportistas">
+    <End Type="AgrocomercioModel.Transportistas" Role="Transportistas" Multiplicity="0..1" />
+    <End Type="AgrocomercioModel.Operaciones" Role="Operaciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Transportistas">
+        <PropertyRef Name="TraCod" />
+      </Principal>
+      <Dependent Role="Operaciones">
+        <PropertyRef Name="TraCod" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Personal_TipoPersonal">
+    <End Type="AgrocomercioModel.TipoPersonal" Role="TipoPersonal" Multiplicity="1" />
+    <End Type="AgrocomercioModel.Personal" Role="Personal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoPersonal">
+        <PropertyRef Name="tpeCod" />
+      </Principal>
+      <Dependent Role="Personal">
+        <PropertyRef Name="tpecod" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuarios_Personal">
+    <End Type="AgrocomercioModel.Personal" Role="Personal" Multiplicity="0..1" />
+    <End Type="AgrocomercioModel.Usuarios" Role="Usuarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Personal">
+        <PropertyRef Name="perCod" />
+      </Principal>
+      <Dependent Role="Usuarios">
+        <PropertyRef Name="perCod" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuarios_Roles">
+    <End Type="AgrocomercioModel.Roles" Role="Roles" Multiplicity="0..1" />
+    <End Type="AgrocomercioModel.Usuarios" Role="Usuarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="rolCod" />
+      </Principal>
+      <Dependent Role="Usuarios">
+        <PropertyRef Name="RolCod" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

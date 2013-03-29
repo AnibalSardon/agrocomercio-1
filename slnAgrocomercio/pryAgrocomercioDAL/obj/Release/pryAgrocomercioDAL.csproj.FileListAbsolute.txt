@@ -1,0 +1,11 @@
+D:\AGROCOMERCIO\AGROCOMERCIO.NET\VS2012\slnAgrocomercio\pryAgrocomercioDAL\bin\Release\pryAgrocomercioDAL.dll.config
+D:\AGROCOMERCIO\AGROCOMERCIO.NET\VS2012\slnAgrocomercio\pryAgrocomercioDAL\bin\Release\pryAgrocomercioDAL.dll
+D:\AGROCOMERCIO\AGROCOMERCIO.NET\VS2012\slnAgrocomercio\pryAgrocomercioDAL\bin\Release\pryAgrocomercioDAL.pdb
+D:\AGROCOMERCIO\AGROCOMERCIO.NET\VS2012\slnAgrocomercio\pryAgrocomercioDAL\obj\Release\pryAgrocomercioDAL.dll
+D:\AGROCOMERCIO\AGROCOMERCIO.NET\VS2012\slnAgrocomercio\pryAgrocomercioDAL\obj\Release\pryAgrocomercioDAL.pdb
+D:\agrocomercio\slnAgrocomercio-2012-11-05\slnAgrocomercio\pryAgrocomercioDAL\bin\Release\pryAgrocomercioDAL.dll.config
+D:\agrocomercio\slnAgrocomercio-2012-11-05\slnAgrocomercio\pryAgrocomercioDAL\bin\Release\pryAgrocomercioDAL.dll
+D:\agrocomercio\slnAgrocomercio-2012-11-05\slnAgrocomercio\pryAgrocomercioDAL\bin\Release\pryAgrocomercioDAL.pdb
+D:\agrocomercio\slnAgrocomercio-2012-11-05\slnAgrocomercio\pryAgrocomercioDAL\obj\Release\ResolveAssemblyReference.cache
+D:\agrocomercio\slnAgrocomercio-2012-11-05\slnAgrocomercio\pryAgrocomercioDAL\obj\Release\pryAgrocomercioDAL.dll
+D:\agrocomercio\slnAgrocomercio-2012-11-05\slnAgrocomercio\pryAgrocomercioDAL\obj\Release\pryAgrocomercioDAL.pdb
